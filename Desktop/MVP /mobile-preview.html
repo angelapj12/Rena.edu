@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#2d2e37">
+    <title>🧘‍♀️ WellnessHub - Mobile Preview</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #2d2e37;
+            font-family: system-ui, -apple-system, sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .mobile-preview-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #cff45e;
+            color: #1f2937;
+            text-align: center;
+            padding: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            z-index: 9999;
+        }
+        
+        .app-container {
+            margin-top: 32px;
+            height: calc(100vh - 32px);
+        }
+        
+        /* Mobile-specific improvements */
+        @media (max-width: 768px) {
+            .mobile-preview-banner {
+                font-size: 11px;
+                padding: 6px;
+            }
+            .app-container {
+                margin-top: 24px;
+                height: calc(100vh - 24px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-preview-banner">
+        📱 Mobile Preview Mode - Dark Theme Active 🌙
+    </div>
+    <div class="app-container">
+        <iframe 
+            src="http://localhost:5173" 
+            style="width: 100%; height: 100%; border: none;"
+            title="WellnessHub Mobile App">
+        </iframe>
+    </div>
+</body>
+</html>

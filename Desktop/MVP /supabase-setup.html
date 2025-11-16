@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supabase Setup Guide - WellnessHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .step-completed { background-color: #10b981; color: white; }
+        .step-current { background-color: #3b82f6; color: white; }
+        .copy-btn:hover { background-color: #f3f4f6; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-900 mb-2">🗄️ Supabase Setup for WellnessHub</h1>
+            <p class="text-gray-600">Set up your database in 5 minutes</p>
+        </div>
+
+        <!-- Step 1: Create Account -->
+        <div class="bg-white rounded-lg shadow-sm border p-8 mb-6">
+            <div class="flex items-center mb-6">
+                <div class="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4">1</div>
+                <h2 class="text-2xl font-bold text-gray-900">Create Supabase Account</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                    <p class="text-green-800 text-sm">
+                        <strong>What is Supabase?</strong> It's your app's database that stores users, classes, bookings, and handles real-time updates. Free tier includes 500MB database and 50MB file storage.
+                    </p>
+                </div>
+
+                <ol class="space-y-3 text-sm">
+                    <li class="flex items-start">
+                        <span class="bg-blue-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs mr-3 mt-0.5">1</span>
+                        <div>
+                            <strong>Go to Supabase:</strong> 
+                            <a href="https://supabase.com" target="_blank" class="text-blue-600 hover:underline ml-2">
+                                https://supabase.com
+                            </a>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-blue-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs mr-3 mt-0.5">2</span>
+                        <span>Click <strong>"Start your project"</strong> → Sign up with GitHub, Google, or email</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-blue-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs mr-3 mt-0.5">3</span>
+                        <span>Verify your email address when prompted</span>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Step 2: Create Project -->
+        <div class="bg-white rounded-lg shadow-sm border p-8 mb-6">
+            <div class="flex items-center mb-6">
+                <div class="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4">2</div>
+                <h2 class="text-2xl font-bold text-gray-900">Create New Project</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                    <p class="text-blue-800 text-sm">
+                        <strong>Important:</strong> Choose a strong database password and save it somewhere secure. You'll need it later!
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="space-y-3">
+                        <h3 class="font-semibold">Project Settings:</h3>
+                        <ul class="text-sm space-y-1">
+                            <li><strong>Name:</strong> "WellnessHub" (or your choice)</li>
+                            <li><strong>Organization:</strong> Your personal org</li>
+                            <li><strong>Plan:</strong> Free (perfect for development)</li>
+                        </ul>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="font-semibold">Database Settings:</h3>
+                        <ul class="text-sm space-y-1">
+                            <li><strong>Password:</strong> Create strong password</li>
+                            <li><strong>Region:</strong> Choose closest to you</li>
+                            <li><strong>Pricing:</strong> Free tier (0$/month)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                    <p class="text-yellow-800 text-sm">
+                        ⏱️ <strong>Wait Time:</strong> Project creation takes 1-2 minutes. Don't close the browser!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3: Get Credentials -->
+        <div class="bg-white rounded-lg shadow-sm border p-8 mb-6">
+            <div class="flex items-center mb-6">
+                <div class="w-8 h-8 bg-purple-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4">3</div>
+                <h2 class="text-2xl font-bold text-gray-900">Get Project Credentials</h2>
+            </div>
+
+            <div class="space-y-4">
+                <p class="text-sm text-gray-600">Once your project is created:</p>
+                
+                <ol class="space-y-3 text-sm">
+                    <li class="flex items-start">
+                        <span class="bg-purple-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs mr-3 mt-0.5">1</span>
+                        <span>Go to <strong>Settings</strong> → <strong>API</strong> in the left sidebar</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-purple-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs mr-3 mt-0.5">2</span>
+                        <span>Copy these two values:</span>
+                    </li>
+                </ol>
+
+                <div class="space-y-3 ml-8">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Project URL:</label>
+                        <div class="flex">
+                            <input 
+                                type="text" 
+                                id="supabase-url" 
+                                placeholder="https://your-project-id.supabase.co" 
+                                class="flex-1 px-3 py-2 border border-gray-300 rounded-l-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            >
+                            <button 
+                                onclick="copyToClipboard('supabase-url')" 
+                                class="px-3 py-2 bg-gray-100 border border-l-0 border-gray-300 rounded-r-md text-sm hover:bg-gray-200 copy-btn"
+                            >📋</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Anon/Public Key:</label>
+                        <div class="flex">
+                            <input 
+                                type="text" 
+                                id="supabase-key" 
+                                placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." 
+                                class="flex-1 px-3 py-2 border border-gray-300 rounded-l-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            >
+                            <button 
+                                onclick="copyToClipboard('supabase-key')" 
+                                class="px-3 py-2 bg-gray-100 border border-l-0 border-gray-300 rounded-r-md text-sm hover:bg-gray-200 copy-btn"
+                            >📋</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 4: Run Database Schema -->
+        <div class="bg-white rounded-lg shadow-sm border p-8 mb-6">
+            <div class="flex items-center mb-6">
+                <div class="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4">4</div>
+                <h2 class="text-2xl font-bold text-gray-900">Create Database Tables</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                    <p class="text-orange-800 text-sm">
+                        <strong>This step creates all the tables your app needs:</strong> users, classes, bookings, achievements, notifications, and security policies.
+                    </p>
+                </div>
+
+                <ol class="space-y-3 text-sm">
+                    <li class="flex items-start">
+                        <span class="bg-orange-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs mr-3 mt-0.5">1</span>
+                        <span>In your Supabase dashboard, click <strong>"SQL Editor"</strong> in the left sidebar</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-orange-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs mr-3 mt-0.5">2</span>
+                        <div>
+                            <span>Open this file on your computer:</span>
+                            <div class="bg-gray-100 p-2 rounded border font-mono text-xs mt-1">
+                                /Users/ang/Desktop/MVP /supabase/schema.sql
+                            </div>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-orange-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs mr-3 mt-0.5">3</span>
+                        <span>Copy <strong>ALL</strong> the contents (about 200+ lines)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-orange-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs mr-3 mt-0.5">4</span>
+                        <span>Paste it into the Supabase SQL Editor</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-orange-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs mr-3 mt-0.5">5</span>
+                        <span>Click the <strong>"Run"</strong> button</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="bg-green-500 text-white w-6 h-6 rounded-full flex items-center justify-center text-xs mr-3 mt-0.5">✓</span>
+                        <span>You should see <strong>"Success. No rows returned"</strong> - that's perfect!</span>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Step 5: Update Environment -->
+        <div class="bg-white rounded-lg shadow-sm border p-8 mb-6">
+            <div class="flex items-center mb-6">
+                <div class="w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4">5</div>
+                <h2 class="text-2xl font-bold text-gray-900">Update Your App</h2>
+            </div>
+
+            <div class="space-y-4">
+                <p class="text-sm text-gray-600">Generate your environment file with the credentials you copied:</p>
+
+                <button 
+                    onclick="generateSupabaseEnv()" 
+                    class="bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors"
+                >
+                    📄 Generate .env File with My Supabase Credentials
+                </button>
+
+                <div id="env-output" class="hidden space-y-3">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">
+                            Copy this to your <code>/Users/ang/Desktop/MVP /.env</code> file:
+                        </label>
+                        <div class="relative">
+                            <textarea 
+                                id="env-content" 
+                                class="w-full h-40 p-3 border border-gray-300 rounded-lg font-mono text-xs resize-none"
+                                readonly
+                            ></textarea>
+                            <button 
+                                onclick="copyToClipboard('env-content')" 
+                                class="absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded text-xs hover:bg-blue-600"
+                            >📋 Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Final Steps -->
+        <div class="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-lg p-8 text-center">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">🎉 Almost Done!</h3>
+            <div class="space-y-3 text-sm text-gray-700 max-w-2xl mx-auto">
+                <p><strong>After completing the steps above:</strong></p>
+                <ol class="text-left space-y-2">
+                    <li>1. Save the generated .env file to your project</li>
+                    <li>2. Restart your development server: <code class="bg-gray-100 px-2 py-1 rounded">npm run dev</code></li>
+                    <li>3. Your app will now have a working database!</li>
+                </ol>
+            </div>
+            
+            <div class="mt-6 space-x-4">
+                <a 
+                    href="http://localhost:5173" 
+                    target="_blank" 
+                    class="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors"
+                >
+                    🚀 Launch WellnessHub
+                </a>
+                <button 
+                    onclick="window.open('setup-wizard.html', '_blank')" 
+                    class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+                >
+                    📝 Continue to Firebase Setup
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard(elementId) {
+            const element = document.getElementById(elementId);
+            element.select();
+            element.setSelectionRange(0, 99999); // For mobile devices
+            document.execCommand('copy');
+            
+            // Visual feedback
+            const button = event.target;
+            const originalText = button.textContent;
+            button.textContent = '✅ Copied!';
+            button.style.backgroundColor = '#10b981';
+            
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.backgroundColor = '';
+            }, 2000);
+        }
+
+        function generateSupabaseEnv() {
+            const supabaseUrl = document.getElementById('supabase-url').value;
+            const supabaseKey = document.getElementById('supabase-key').value;
+
+            if (!supabaseUrl || !supabaseKey) {
+                alert('Please enter both your Supabase URL and API key first!');
+                return;
+            }
+
+            const envContent = `# Supabase Configuration
+VITE_SUPABASE_URL=${supabaseUrl}
+VITE_SUPABASE_ANON_KEY=${supabaseKey}
+
+# Firebase Configuration (add these when you set up Firebase)
+VITE_FIREBASE_API_KEY=your-firebase-api-key
+VITE_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=your-project-id
+VITE_FIREBASE_STORAGE_BUCKET=your-project.appspot.com
+VITE_FIREBASE_MESSAGING_SENDER_ID=123456789
+VITE_FIREBASE_APP_ID=your-app-id
+VITE_FIREBASE_MEASUREMENT_ID=G-XXXXXXXXXX
+VITE_FIREBASE_VAPID_KEY=your-vapid-key
+
+# App Configuration
+VITE_APP_NAME="WellnessHub"
+VITE_APP_URL=http://localhost:5173`;
+
+            document.getElementById('env-content').value = envContent;
+            document.getElementById('env-output').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>

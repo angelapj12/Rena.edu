@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Explorer Test</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            background-color: #f8f9fa;
+        }
+        .card { 
+            background: white;
+            padding: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .success { 
+            background-color: #d4edda; 
+            color: #155724; 
+            border: 1px solid #c3e6cb;
+        }
+        .info { 
+            background-color: #d1ecf1; 
+            color: #0c5460; 
+            border: 1px solid #bee5eb;
+        }
+        h1 { color: #333; margin-top: 0; }
+        a { color: #007bff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>🔍 Database Explorer - Test Page</h1>
+        
+        <div class="card success">
+            <strong>✅ Routing Test Successful!</strong><br>
+            This confirms that our routing concept works and the database explorer should load.
+        </div>
+
+        <div class="card info">
+            <h3>🧪 Development Server Status</h3>
+            <p>If you're seeing this page, it means:</p>
+            <ul>
+                <li>✅ File structure is correct</li>
+                <li>✅ Router component should work</li>
+                <li>🔄 Need to start the React dev server</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>🚀 To Fix the Loading Issue:</h3>
+            <ol>
+                <li><strong>Open Terminal in VS Code</strong></li>
+                <li><strong>Run:</strong> <code>npm run dev</code></li>
+                <li><strong>Wait for:</strong> "Local: http://localhost:5173"</li>
+                <li><strong>Visit:</strong> <a href="http://localhost:5173/db-explorer">http://localhost:5173/db-explorer</a></li>
+            </ol>
+        </div>
+
+        <div class="card">
+            <h3>📂 Test Links (when server runs):</h3>
+            <ul>
+                <li><a href="/db-explorer">🔍 Database Explorer</a></li>
+                <li><a href="/db-test">🧪 Database Test</a></li>
+                <li><a href="/">🏠 Main App</a></li>
+            </ul>
+        </div>
+
+        <div class="card info">
+            <strong>Current Location:</strong> <span id="current-path"></span>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('current-path').textContent = window.location.href;
+    </script>
+</body>
+</html>

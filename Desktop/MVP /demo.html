@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WellnessHub - Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .btn-primary { 
+            background-color: #2563eb; 
+            color: white; 
+            padding: 0.5rem 1rem; 
+            border-radius: 0.5rem; 
+            transition: background-color 0.2s;
+        }
+        .btn-primary:hover { background-color: #1d4ed8; }
+        .btn-outline { 
+            border: 1px solid #d1d5db; 
+            color: #374151; 
+            padding: 0.5rem 1rem; 
+            border-radius: 0.5rem; 
+            transition: background-color 0.2s;
+        }
+        .btn-outline:hover { background-color: #f9fafb; }
+        .card { 
+            background-color: white; 
+            border-radius: 0.5rem; 
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1); 
+            border: 1px solid #e5e7eb; 
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div id="root">
+        <div class="min-h-screen bg-gray-50">
+            <!-- Top Navigation -->
+            <nav class="bg-white shadow-sm border-b fixed top-0 left-0 right-0 z-50">
+                <div class="container mx-auto px-4">
+                    <div class="flex items-center justify-between h-16">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-2xl">🧘‍♀️</span>
+                            <h1 class="text-xl font-bold text-gray-900">WellnessHub</h1>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <span class="text-sm text-gray-600">Demo Mode</span>
+                            <button class="btn-primary">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="pt-20 pb-20">
+                <div class="container mx-auto px-4 py-6">
+                    <!-- Welcome Section -->
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Welcome to WellnessHub</h2>
+                        <p class="text-gray-600 mb-6">Your gamified wellness journey starts here!</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                            <div class="card p-6 text-center">
+                                <div class="text-4xl mb-3">🎮</div>
+                                <h3 class="font-semibold mb-2">Gamification</h3>
+                                <p class="text-sm text-gray-600">Earn XP, level up, and unlock achievements</p>
+                            </div>
+                            <div class="card p-6 text-center">
+                                <div class="text-4xl mb-3">🏃‍♀️</div>
+                                <h3 class="font-semibold mb-2">Classes</h3>
+                                <p class="text-sm text-gray-600">Book yoga, fitness, and wellness classes</p>
+                            </div>
+                            <div class="card p-6 text-center">
+                                <div class="text-4xl mb-3">📊</div>
+                                <h3 class="font-semibold mb-2">Progress</h3>
+                                <p class="text-sm text-gray-600">Track your wellness journey and streaks</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Demo Dashboard -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <!-- User Stats -->
+                        <div class="card p-6">
+                            <h3 class="text-lg font-semibold mb-4">Your Progress</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="flex justify-between text-sm mb-1">
+                                        <span>Level 3</span>
+                                        <span>250/400 XP</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-blue-600 h-2 rounded-full" style="width: 62.5%"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="grid grid-cols-2 gap-4 mt-6">
+                                    <div class="text-center">
+                                        <div class="text-2xl font-bold text-blue-600">15</div>
+                                        <div class="text-sm text-gray-600">Classes Attended</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="text-2xl font-bold text-green-600">7</div>
+                                        <div class="text-sm text-gray-600">Day Streak 🔥</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Available Classes -->
+                        <div class="card p-6">
+                            <h3 class="text-lg font-semibold mb-4">Today's Classes</h3>
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                    <div>
+                                        <div class="font-medium">Morning Yoga</div>
+                                        <div class="text-sm text-gray-600">9:00 AM - 10:00 AM</div>
+                                    </div>
+                                    <button class="btn-primary text-sm">Book</button>
+                                </div>
+                                <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                    <div>
+                                        <div class="font-medium">HIIT Workout</div>
+                                        <div class="text-sm text-gray-600">6:00 PM - 7:00 PM</div>
+                                    </div>
+                                    <button class="btn-primary text-sm">Book</button>
+                                </div>
+                                <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                                    <div>
+                                        <div class="font-medium">Meditation</div>
+                                        <div class="text-sm text-gray-600">8:00 PM - 8:30 PM</div>
+                                    </div>
+                                    <button class="btn-primary text-sm">Book</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Demo Notice -->
+                    <div class="mt-8 bg-blue-50 border border-blue-200 rounded-lg p-6 text-center">
+                        <h3 class="font-semibold text-blue-900 mb-2">🚧 Demo Mode Active</h3>
+                        <p class="text-blue-800 text-sm mb-4">
+                            This is a preview of your WellnessHub app. To enable full functionality:
+                        </p>
+                        <div class="space-y-2 text-blue-800 text-sm">
+                            <p>1. Set up Supabase database (5 minutes)</p>
+                            <p>2. Configure Firebase authentication (5 minutes)</p>
+                            <p>3. Update environment variables</p>
+                        </div>
+                        <button class="btn-primary mt-4" onclick="window.open('setup-wizard.html', '_blank')">
+                            Setup Backend Services
+                        </button>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Bottom Navigation -->
+            <nav class="bg-white shadow-sm border-t fixed bottom-0 left-0 right-0">
+                <div class="container mx-auto px-4">
+                    <div class="flex items-center justify-around h-16">
+                        <button class="flex flex-col items-center space-y-1 text-blue-600">
+                            <span class="text-sm">🏠</span>
+                            <span class="text-xs">Home</span>
+                        </button>
+                        <button class="flex flex-col items-center space-y-1 text-gray-400">
+                            <span class="text-sm">🔍</span>
+                            <span class="text-xs">Browse</span>
+                        </button>
+                        <button class="flex flex-col items-center space-y-1 text-gray-400">
+                            <span class="text-sm">🎮</span>
+                            <span class="text-xs">Dashboard</span>
+                        </button>
+                        <button class="flex flex-col items-center space-y-1 text-gray-400">
+                            <span class="text-sm">📅</span>
+                            <span class="text-xs">Bookings</span>
+                        </button>
+                        <button class="flex flex-col items-center space-y-1 text-gray-400">
+                            <span class="text-sm">👤</span>
+                            <span class="text-xs">Profile</span>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>

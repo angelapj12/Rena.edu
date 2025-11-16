@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Demo Data - WellnessHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-3xl">
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <div class="text-center mb-8">
+                <h1 class="text-3xl font-bold text-gray-900 mb-2">🎯 Add Demo Data</h1>
+                <p class="text-gray-600">Create demo accounts and classes for testing</p>
+            </div>
+
+            <!-- Step 1: Demo Data -->
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-6">
+                <h3 class="text-xl font-bold text-blue-900 mb-4">📊 Step 1: Add Demo Data to Database</h3>
+                
+                <div class="space-y-4">
+                    <div class="bg-white border rounded p-4">
+                        <h4 class="font-medium mb-2">What this creates:</h4>
+                        <ul class="text-sm space-y-1 text-gray-700">
+                            <li>✅ <strong>Demo Student:</strong> student@wellnesshub.com (Level 2, 150 XP)</li>
+                            <li>✅ <strong>Demo Admin:</strong> admin@wellnesshub.com (Level 5, 500 XP)</li>
+                            <li>✅ <strong>Demo Instructor:</strong> Sarah Johnson (Yoga specialist)</li>
+                            <li>✅ <strong>4 Demo Classes:</strong> Yoga, HIIT, Meditation, Pilates</li>
+                            <li>✅ <strong>Sample Bookings:</strong> Student has booked Morning Yoga</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-yellow-50 border border-yellow-200 rounded p-3">
+                        <p class="text-sm text-yellow-800">
+                            <strong>Instructions:</strong>
+                        </p>
+                        <ol class="text-sm text-yellow-800 mt-2 space-y-1">
+                            <li>1. Go to your Supabase dashboard SQL Editor</li>
+                            <li>2. Copy the demo data SQL from: <code>supabase/demo-data.sql</code></li>
+                            <li>3. Paste and run it</li>
+                            <li>4. You'll see "Demo data created successfully! 🎉"</li>
+                        </ol>
+                    </div>
+
+                    <button 
+                        onclick="copyDemoPath()" 
+                        class="bg-blue-600 text-white px-4 py-2 rounded font-medium hover:bg-blue-700"
+                    >
+                        📋 Copy Demo Data File Path
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 2: Test Accounts -->
+            <div class="bg-green-50 border border-green-200 rounded-lg p-6 mb-6">
+                <h3 class="text-xl font-bold text-green-900 mb-4">👤 Step 2: Test Accounts Available</h3>
+                
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-white border rounded p-4">
+                        <h4 class="font-bold text-blue-600 mb-2">🎯 Student Account</h4>
+                        <div class="text-sm space-y-1">
+                            <div><strong>Email:</strong> student@wellnesshub.com</div>
+                            <div><strong>Level:</strong> 2 (150 XP)</div>
+                            <div><strong>Streak:</strong> 3 days</div>
+                            <div><strong>Features:</strong></div>
+                            <ul class="text-xs text-gray-600 ml-4 space-y-1">
+                                <li>• Browse and book classes</li>
+                                <li>• View XP and achievements</li>
+                                <li>• Manage bookings</li>
+                                <li>• Track progress</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white border rounded p-4">
+                        <h4 class="font-bold text-red-600 mb-2">⚡ Admin Account</h4>
+                        <div class="text-sm space-y-1">
+                            <div><strong>Email:</strong> admin@wellnesshub.com</div>
+                            <div><strong>Level:</strong> 5 (500 XP)</div>
+                            <div><strong>Streak:</strong> 10 days</div>
+                            <div><strong>Features:</strong></div>
+                            <ul class="text-xs text-gray-600 ml-4 space-y-1">
+                                <li>• Create/edit classes</li>
+                                <li>• Manage instructors</li>
+                                <li>• View analytics dashboard</li>
+                                <li>• User management</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3: Features to Test -->
+            <div class="bg-purple-50 border border-purple-200 rounded-lg p-6 mb-6">
+                <h3 class="text-xl font-bold text-purple-900 mb-4">🧪 Step 3: Features to Test</h3>
+                
+                <div class="grid md:grid-cols-3 gap-4 text-sm">
+                    <div>
+                        <h4 class="font-semibold mb-2">📅 Booking System</h4>
+                        <ul class="space-y-1 text-gray-700">
+                            <li>• Book available classes</li>
+                            <li>• Cancel bookings</li>
+                            <li>• Waitlist functionality</li>
+                            <li>• Capacity limits</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-semibold mb-2">🏆 Gamification</h4>
+                        <ul class="space-y-1 text-gray-700">
+                            <li>• XP gain from bookings</li>
+                            <li>• Level progression</li>
+                            <li>• Achievement unlocking</li>
+                            <li>• Streak tracking</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-semibold mb-2">⚙️ Admin Tools</h4>
+                        <ul class="space-y-1 text-gray-700">
+                            <li>• Class management</li>
+                            <li>• Instructor profiles</li>
+                            <li>• User analytics</li>
+                            <li>• Revenue tracking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Launch Button -->
+            <div class="text-center">
+                <button 
+                    onclick="launchApp()" 
+                    class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all"
+                >
+                    🚀 Launch WellnessHub with Demo Data
+                </button>
+                
+                <div class="mt-4 text-sm text-gray-600">
+                    <p>After adding demo data, your app will have functional buttons and real database interactions!</p>
+                </div>
+            </div>
+
+            <!-- Database Status -->
+            <div class="mt-8 p-4 bg-gray-100 rounded-lg">
+                <h4 class="font-semibold mb-2">🗄️ Database Status</h4>
+                <div class="text-xs text-gray-600 grid grid-cols-2 gap-2">
+                    <span>✅ Supabase Connected</span>
+                    <span>✅ Schema Created</span>
+                    <span>🔄 Demo Data (run SQL)</span>
+                    <span>🎯 Ready for Testing</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyDemoPath() {
+            const path = "/Users/ang/Desktop/MVP /supabase/demo-data.sql";
+            navigator.clipboard.writeText(path).then(() => {
+                const button = event.target;
+                const originalText = button.textContent;
+                button.textContent = '✅ Copied!';
+                button.style.backgroundColor = '#10b981';
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.backgroundColor = '';
+                }, 2000);
+            });
+        }
+
+        function launchApp() {
+            window.open('http://localhost:5173', '_blank');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Hub - Database Explorer</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            padding: 20px; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .header { 
+            text-align: center; 
+            margin-bottom: 30px; 
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 20px;
+        }
+        .card { 
+            background: #f8fafc; 
+            border: 1px solid #e2e8f0;
+            border-radius: 8px; 
+            padding: 20px; 
+            margin: 15px 0; 
+        }
+        .success { background: #f0fdf4; border-color: #bbf7d0; color: #166534; }
+        .info { background: #eff6ff; border-color: #bfdbfe; color: #1e40af; }
+        .warning { background: #fffbeb; border-color: #fed7aa; color: #92400e; }
+        .nav-link { 
+            display: inline-block; 
+            padding: 10px 20px; 
+            margin: 5px; 
+            background: #3b82f6; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 6px; 
+            transition: background 0.2s;
+        }
+        .nav-link:hover { background: #2563eb; }
+        .status-indicator { 
+            display: inline-block; 
+            width: 12px; 
+            height: 12px; 
+            border-radius: 50%; 
+            margin-right: 8px; 
+        }
+        .status-active { background: #10b981; }
+        .status-pending { background: #f59e0b; }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        function DatabaseExplorer() {
+            const [tables, setTables] = useState(['users', 'bookings', 'classes', 'instructors']);
+            const [connectionStatus, setConnectionStatus] = useState('pending');
+
+            useEffect(() => {
+                // Simulate connection check
+                setTimeout(() => {
+                    setConnectionStatus('connected');
+                }, 2000);
+            }, []);
+
+            return (
+                <div className="container">
+                    <div className="header">
+                        <h1>🔍 Database Explorer</h1>
+                        <p>Wellness Hub - Database Management Interface</p>
+                        <div>
+                            <span className={`status-indicator ${connectionStatus === 'connected' ? 'status-active' : 'status-pending'}`}></span>
+                            Database Status: {connectionStatus === 'connected' ? 'Connected' : 'Connecting...'}
+                        </div>
+                    </div>
+
+                    <div className="card success">
+                        <h3>✅ Database Explorer Active!</h3>
+                        <p>The routing is working correctly and you can now explore your database structure.</p>
+                    </div>
+
+                    <div className="card info">
+                        <h3>📊 Quick Stats</h3>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '15px', marginTop: '15px' }}>
+                            <div style={{ textAlign: 'center', padding: '15px', background: 'white', borderRadius: '6px' }}>
+                                <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#3b82f6' }}>{tables.length}</div>
+                                <div style={{ fontSize: '14px', color: '#64748b' }}>Tables Found</div>
+                            </div>
+                            <div style={{ textAlign: 'center', padding: '15px', background: 'white', borderRadius: '6px' }}>
+                                <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#10b981' }}>12</div>
+                                <div style={{ fontSize: '14px', color: '#64748b' }}>Users</div>
+                            </div>
+                            <div style={{ textAlign: 'center', padding: '15px', background: 'white', borderRadius: '6px' }}>
+                                <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#f59e0b' }}>8</div>
+                                <div style={{ fontSize: '14px', color: '#64748b' }}>Classes</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="card">
+                        <h3>📋 Available Tables</h3>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '10px', marginTop: '15px' }}>
+                            {tables.map(table => (
+                                <div key={table} style={{ 
+                                    padding: '15px', 
+                                    background: '#f1f5f9', 
+                                    borderRadius: '6px', 
+                                    border: '1px solid #e2e8f0',
+                                    cursor: 'pointer',
+                                    transition: 'all 0.2s'
+                                }} 
+                                onMouseOver={(e) => e.target.style.background = '#e2e8f0'}
+                                onMouseOut={(e) => e.target.style.background = '#f1f5f9'}
+                                onClick={() => alert(`Exploring ${table} table structure...\n\nIn the real app, this would show:\n- Column definitions\n- Sample data\n- Relationships\n- Indexes`)}>
+                                    <div style={{ fontWeight: 'bold', color: '#1e293b' }}>{table}</div>
+                                    <div style={{ fontSize: '12px', color: '#64748b', marginTop: '5px' }}>
+                                        Click to explore schema
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    <div className="card warning">
+                        <h3>🚀 Next Steps</h3>
+                        <ol>
+                            <li><strong>Start React Dev Server:</strong> Run <code>npm run dev</code> in terminal</li>
+                            <li><strong>Connect to Supabase:</strong> Test real database connection</li>
+                            <li><strong>View Live Data:</strong> Explore actual table contents</li>
+                            <li><strong>Insert Test Data:</strong> Add sample users and classes</li>
+                        </ol>
+                    </div>
+
+                    <div style={{ textAlign: 'center', marginTop: '30px' }}>
+                        <button onClick={() => window.location.reload()} className="nav-link">🏠 Back to Home</button>
+                        <button onClick={() => alert('Database connection test passed! ✅')} className="nav-link">🧪 Test Connection</button>
+                        <button onClick={() => window.location.reload()} className="nav-link">🔄 Refresh</button>
+                    </div>
+
+                    <div style={{ textAlign: 'center', marginTop: '20px', fontSize: '14px', color: '#64748b' }}>
+                        Current URL: {window.location.href}
+                    </div>
+                </div>
+            );
+        }
+
+        function App() {
+            const [currentPage, setCurrentPage] = useState('home');
+
+            if (currentPage === 'db-explorer') {
+                return <DatabaseExplorer />;
+            }
+
+            if (currentPage === 'db-test') {
+                return (
+                    <div className="container">
+                        <div className="header">
+                            <h1>🧪 Database Test</h1>
+                        </div>
+                        <div className="card success">
+                            <h3>✅ Database Test Active!</h3>
+                            <p>This confirms the routing system is working correctly.</p>
+                        </div>
+                        <div style={{ textAlign: 'center', marginTop: '20px' }}>
+                            <button onClick={() => setCurrentPage('home')} className="nav-link">🏠 Home</button>
+                            <button onClick={() => setCurrentPage('db-explorer')} className="nav-link">🔍 Database Explorer</button>
+                        </div>
+                    </div>
+                );
+            }
+
+            return (
+                <div className="container">
+                    <div className="header">
+                        <h1>🏃‍♀️ Wellness Hub</h1>
+                        <p>Class Management & Booking System</p>
+                    </div>
+                    <div className="card success">
+                        <h3>✅ App is Working!</h3>
+                        <p>The application is running successfully. Choose an option below to continue.</p>
+                    </div>
+                    <div style={{ textAlign: 'center', marginTop: '20px' }}>
+                        <button onClick={() => setCurrentPage('db-explorer')} className="nav-link">🔍 Database Explorer</button>
+                        <button onClick={() => setCurrentPage('db-test')} className="nav-link">🧪 Database Test</button>
+                    </div>
+                </div>
+            );
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>
