@@ -1,8 +1,14 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+
 type ConfirmationProps = {
   name: string;
 };
 
 export default function Confirmation({ name }: ConfirmationProps) {
+  const t = useTranslations("booking.confirmation");
+
   return (
     <div className="space-y-6 text-center">
       <div className="mb-8">
@@ -22,29 +28,25 @@ export default function Confirmation({ name }: ConfirmationProps) {
           </svg>
         </div>
         <h2 className="text-4xl font-serif font-semibold text-[#2B2B2B] mb-4">
-          Request Received
+          {t("title")}
         </h2>
         <p className="text-xl text-[#2B2B2B]/80 leading-relaxed max-w-2xl mx-auto">
-          Thank you{name ? `, ${name}` : ""}. Your booking request has been
-          received.
+          {t("thankYou")}{name ? `, ${name}` : ""}. {t("message")}
         </p>
       </div>
 
       <div className="bg-[#FAF9F7] p-8 rounded-2xl border border-[#E8E6E3] text-left max-w-2xl mx-auto">
         <p className="text-lg text-[#2B2B2B]/80 leading-relaxed mb-4">
-          We've received your request and will review it carefully. Our team will
-          get back to you via phone within the next 24 hours to discuss
-          availability and next steps.
+          {t("description1")}
         </p>
         <p className="text-lg text-[#2B2B2B]/80 leading-relaxed">
-          This is a request, not an instant booking. We'll work with you to find
-          the best time and access option for your needs.
+          {t("description2")}
         </p>
       </div>
 
       <div className="pt-6">
         <p className="text-[#2B2B2B]/70 leading-relaxed">
-          If you have any urgent questions, please don't hesitate to reach out.
+          {t("urgent")}
         </p>
       </div>
     </div>

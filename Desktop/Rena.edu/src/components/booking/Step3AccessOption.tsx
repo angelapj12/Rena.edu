@@ -1,3 +1,7 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+
 type FormData = {
   accessOption: string;
   additionalNotes: string;
@@ -12,20 +16,22 @@ export default function Step3AccessOption({
   formData,
   updateFormData,
 }: Step3AccessOptionProps) {
+  const t = useTranslations("booking.step3");
+
   return (
     <div className="space-y-6">
       <div>
         <h2 className="text-3xl font-serif font-medium text-[#2B2B2B] mb-2">
-          Access Option
+          {t("title")}
         </h2>
         <p className="text-[#2B2B2B]/70 leading-relaxed">
-          Select the access option that best fits your needs.
+          {t("description")}
         </p>
       </div>
 
       <div>
         <label className="block text-sm font-medium text-[#2B2B2B] mb-4">
-          Access Option
+          {t("accessOption")}
         </label>
         <div className="space-y-3">
           <label className="flex items-start p-4 border border-[#E8E6E3] rounded-lg cursor-pointer hover:border-[#2B2B2B]/20 transition-colors">
@@ -39,10 +45,10 @@ export default function Step3AccessOption({
             />
             <div>
               <div className="font-medium text-[#2B2B2B]">
-                Flexible Access
+                {t("options.flexible.title")}
               </div>
               <div className="text-sm text-[#2B2B2B]/70 mt-1">
-                For ad-hoc or short-term use
+                {t("options.flexible.description")}
               </div>
             </div>
           </label>
@@ -58,10 +64,10 @@ export default function Step3AccessOption({
             />
             <div>
               <div className="font-medium text-[#2B2B2B]">
-                Committed Access
+                {t("options.committed.title")}
               </div>
               <div className="text-sm text-[#2B2B2B]/70 mt-1">
-                For weekly or recurring classes
+                {t("options.committed.description")}
               </div>
             </div>
           </label>
@@ -77,10 +83,10 @@ export default function Step3AccessOption({
             />
             <div>
               <div className="font-medium text-[#2B2B2B]">
-                Resident / Anchor Access
+                {t("options.resident.title")}
               </div>
               <div className="text-sm text-[#2B2B2B]/70 mt-1">
-                For long-term, high-consistency use
+                {t("options.resident.description")}
               </div>
             </div>
           </label>
@@ -92,7 +98,7 @@ export default function Step3AccessOption({
           htmlFor="additionalNotes"
           className="block text-sm font-medium text-[#2B2B2B] mb-2"
         >
-          Additional Notes
+          {t("additionalNotes")}
         </label>
         <textarea
           id="additionalNotes"
@@ -100,7 +106,7 @@ export default function Step3AccessOption({
           value={formData.additionalNotes}
           onChange={(e) => updateFormData("additionalNotes", e.target.value)}
           className="w-full px-4 py-3 border border-[#E8E6E3] rounded-lg focus:ring-2 focus:ring-[#FF7A5C] focus:border-transparent bg-[#FAF9F7] text-[#2B2B2B]"
-          placeholder="Any additional information or special requirements..."
+          placeholder={t("placeholder")}
         />
       </div>
     </div>

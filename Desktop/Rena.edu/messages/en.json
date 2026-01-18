@@ -1,0 +1,303 @@
+{
+  "common": {
+    "siteName": "Rena.edu",
+    "submitClass": "Submit a Class",
+    "bookTour": "Book a Tour",
+    "theSpace": "The Space",
+    "previous": "Previous",
+    "continue": "Continue",
+    "edit": "Edit",
+    "submitting": "Submitting...",
+    "submitRequest": "Submit Request",
+    "notProvided": "Not provided"
+  },
+  "homepage": {
+    "hero": {
+      "title": "A Licensed Teaching Studio. Built for Intentional,Professional Use",
+      "subtitle": "Ready When You Are",
+      "description": "A fully equipped, compliant classroom in the city's core—designed for instructors and organizations who value predictability, credibility, and ease. You arrive. You teach. We handle the rest."
+    },
+    "useCases": {
+      "title": "An urban solution to your education needs.",
+      "cards": {
+        "weeklyClass": {
+          "title": "Run a Weekly Class",
+          "description": "You have students. You need a consistent, licensed space every week—without managing a lease or facility."
+        },
+        "testCourse": {
+          "title": "Test a New Course",
+          "description": "Launch a pilot, gather real feedback, validate market fit before long-term commitment."
+        },
+        "intensive": {
+          "title": "Host an Intensive or Workshop",
+          "description": "Short-term programs, exam prep, specialized sessions—fully compliant and ready to teach in."
+        },
+        "professionalTraining": {
+          "title": "Deliver Professional Training",
+          "description": "For associations, academies, and organizations that require a licensed, central venue."
+        },
+        "seminar": {
+          "title": "Host a Hybrid Learning Session",
+          "description": "Blend in-person and remote participants in a professional setting—ideal for webinars, Q&As, and distributed training."
+        },
+        "popupClass": {
+          "title": "Book Flexible, Short-Term Access",
+          "description": "Ad-hoc sessions, guest instructors, one-off events—premium space, no long-term contract required."
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "How To Get Started",
+      "steps": {
+        "1": {
+          "title": "Explore the Space",
+          "description": "Review our access options, pricing logic, and use cases online."
+        },
+        "2": {
+          "title": "Submit Your Request",
+          "description": "Tell us what you plan to teach and when you'd like to use the space."
+        },
+        "3": {
+          "title": "Review & Tour",
+          "description": "For all types of requests, we'll schedule a brief tour to introduce you to the space and confirm fit."
+        },
+        "4": {
+          "title": "Get Scheduled",
+          "description": "Once approved, your time is reserved."
+        }
+      }
+    },
+    "cta": {
+      "title": "What Comes Next?"
+    },
+    "marquee": {
+      "items": [
+        "Weekly language classes",
+        "Certification programs",
+        "Skills workshops",
+        "Professional training",
+        "Test-prep sessions",
+        "Short-term intensives",
+        "Dance School",
+        "Theatre Class",
+        "Corporate Training"
+      ]
+    }
+  },
+  "space": {
+    "hero": {
+      "title": "A Professional Teaching Studio at the City's Center",
+      "description": "A Classroom Built for Real Teaching"
+    },
+    "environment": {
+      "title": "The Environment",
+      "intro": "A Classroom Built for Serious Instructors",
+      "features": {
+        "licensed": "Licensed and compliant for education use",
+        "furnished": "Fully furnished and professionally maintained",
+        "simple": "Equipped for immediate use—no setup required",
+        "exclusive": "One class at a time—no noise overlap or scheduling conflicts"
+      },
+      "outro": "You arrive ready to teach. We handle everything else."
+    },
+    "location": {
+      "title": "Why Central Location Matters",
+      "description1": "The studio is located in the city's professional core, within a high-quality commercial building designed for serious business use.",
+      "description2": "This matters because it means:",
+      "benefits": {
+        "accessible": "Easy to reach for students across the city",
+        "transport": "Close to transport, offices, and daily amenities",
+        "professional": "Suitable for working professionals and adult learners",
+        "premium": "Positioned as a premium, intentional learning experience"
+      },
+      "description3": "The venue does part of your credibility work for you."
+    },
+    "pricing": {
+      "title": "Access Options: Priced by Commitment",
+      "subtitle": "We price based on predictability — More consistency means better rates—it's that simple.",
+      "options": {
+        "flexible": {
+          "title": "Flexible Access",
+          "subtitle": "For occasional or short-term use",
+          "features": [
+            "Bookable by the hour",
+            "No fixed weekly commitment",
+            "Maximum scheduling flexibility",
+            "Premium hourly rate"
+          ],
+          "note": "Typical users: Guest instructors · One-off workshops · Pilot courses · Specialized sessions"
+        },
+        "committed": {
+          "title": "Committed Access",
+          "subtitle": "For weekly or recurring programs",
+          "features": [
+            "Fixed weekly schedule (4+ hours per week)",
+            "Discounted hourly rate",
+            "Priority for peak hours",
+            "Minimum commitment period (min one month)"
+          ],
+          "note": "Typical users: Independent instructors · Small academies · Professional associations · Ongoing classes"
+        },
+        "resident": {
+          "title": "Resident Access",
+          "subtitle": "For established, long-term programs",
+          "features": [
+            "Reserved time slots across the week",
+            "Best effective hourly rates",
+            "Premium scheduling priority",
+            "Designed for stability (3+ months or 12+ hours per week)"
+          ],
+          "note": "Typical users: Established academies · Certification providers · Institutional partners · Core programs"
+        }
+      }
+    },
+    "audience": {
+      "title": "Who This Space Works Best For",
+      "cards": {
+        "instructors": {
+          "title": "Independent Instructors",
+          "description": "You teach regularly. You want a reliable, professional classroom without the burden of running a facility. This is built for you."
+        },
+        "academies": {
+          "title": "Academies & Associations",
+          "description": "You run structured programs that demand consistency, licensing, compliance, and central access. We provide the infrastructure so you focus on instruction."
+        },
+        "institutions": {
+          "title": "Institutions & Corporate Training",
+          "description": "You require licensed space, clear operations, transparent scheduling, and predictable costs. No surprises. No chaos."
+        },
+        "shortTerm": {
+          "title": "Short-Term Specialized Programs & Events",
+          "description": "You need a ready-to-use classroom for a defined period—workshops, intensives, certifications, guest-led sessions. No long-term obligations required."
+        }
+      }
+    },
+    "booking": {
+      "title": "How Booking Works",
+      "steps": {
+        "1": {
+          "title": "Review Information Online",
+          "description": "Understand how the space operates, which access level fits your use, and what to expect."
+        },
+        "2": {
+          "title": "Submit Your Request",
+          "description": "Share your class details, schedule preferences, and how you plan to use the space."
+        },
+        "3": {
+          "title": "Tour & Review (if needed)",
+          "description": "For all types of requests, we'll walk through the space together—about 15 minutes. This confirms we're a good fit for each other."
+        },
+        "4": {
+          "title": "Confirm & Schedule",
+          "description": "Once approved, your access is secured."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Teach Here?"
+    },
+    "closing": {
+      "text1": "This space is designed for instructors who understand that environment shapes teaching.",
+      "text2": "If you value clarity, consistency, and a professional foundation, you've found the right place."
+    }
+  },
+  "booking": {
+    "step1": {
+      "title": "Your Name",
+      "description": "Please provide your name information.",
+      "chineseLastName": "Chinese Last Name",
+      "chineseFirstName": "Chinese First Name",
+      "englishName": "English Name",
+      "placeholders": {
+        "chineseLastName": "王",
+        "chineseFirstName": "小明",
+        "englishName": "John Doe"
+      }
+    },
+    "step2": {
+      "title": "Class Details",
+      "description": "Tell us about the class or program you'd like to teach.",
+      "classDescription": "Class Description",
+      "preferredTimes": "Preferred Times",
+      "placeholders": {
+        "classDescription": "Describe your class, subject matter, and learning objectives...",
+        "preferredTimes": "e.g., Mondays 6-8pm, or flexible weekday mornings"
+      }
+    },
+    "step3": {
+      "title": "Access Option",
+      "description": "Select the access option that best fits your needs.",
+      "accessOption": "Access Option",
+      "additionalNotes": "Additional Notes",
+      "options": {
+        "flexible": {
+          "title": "Flexible Access",
+          "description": "For ad-hoc or short-term use"
+        },
+        "committed": {
+          "title": "Committed Access",
+          "description": "For weekly or recurring classes"
+        },
+        "resident": {
+          "title": "Resident / Anchor Access",
+          "description": "For long-term, high-consistency use"
+        }
+      },
+      "placeholder": "Any additional information or special requirements..."
+    },
+    "step4": {
+      "title": "Equipment & Technology",
+      "description": "Select any additional equipment or technology you'll need for your class.",
+      "equipment": {
+        "projector": "Projector & Screen",
+        "whiteboard": "Whiteboard",
+        "desks-chairs": "Desks and Chairs",
+        "workout-mats": "Workout Mats",
+        "yoga-blocks": "Yoga Blocks",
+        "sound-system": "Sound System / Speakers",
+        "microphone": "Microphone",
+        "laptop-computer": "Laptop / Computer",
+        "printer": "Printer",
+        "tables": "Tables",
+        "storage": "Storage Cabinets",
+        "none": "No additional equipment needed"
+      }
+    },
+    "step5": {
+      "title": "Review Your Request",
+      "note": "Please review your information below. This is a booking request, not an instant booking. We'll review your request and get back to you shortly to confirm availability and next steps.",
+      "sections": {
+        "contactInfo": "Contact Information",
+        "contactDetails": "Contact Details",
+        "classDetails": "Class Details",
+        "accessOption": "Access Option",
+        "equipment": "Equipment & Technology",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "chineseName": "Chinese Name",
+        "englishName": "English Name",
+        "classDescription": "Class Description",
+        "preferredTimes": "Preferred Times",
+        "additionalNotes": "Additional Notes",
+        "selectedEquipment": "Selected Equipment",
+        "noEquipment": "No equipment selected"
+      },
+      "placeholders": {
+        "email": "john@example.com",
+        "phone": "+1 (555) 123-4567"
+      }
+    },
+    "confirmation": {
+      "title": "Request Received",
+      "thankYou": "Thank you",
+      "message": "Your booking request has been received.",
+      "description1": "We've received your request and will review it carefully. Our team will get back to you via phone within the next 24 hours to discuss availability and next steps.",
+      "description2": "This is a request, not an instant booking. We'll work with you to find the best time and access option for your needs.",
+      "urgent": "If you have any urgent questions, please don't hesitate to reach out."
+    }
+  },
+  "footer": {
+    "copyright": "© {year} Rena.edu",
+    "tagline": "A licensed, fully equipped education space"
+  }
+}

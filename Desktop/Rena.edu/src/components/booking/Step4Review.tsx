@@ -1,3 +1,7 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+
 type FormData = {
   chineseLastName: string;
   chineseFirstName: string;
@@ -22,17 +26,20 @@ export default function Step4Review({
   onEditStep,
   updateFormData,
 }: Step4ReviewProps) {
+  const t = useTranslations("booking.step5");
+  const tCommon = useTranslations("common");
+  const tStep3 = useTranslations("booking.step3");
+  const tStep4 = useTranslations("booking.step4");
+
   return (
     <div className="space-y-6">
       <div>
         <h2 className="text-3xl font-serif font-medium text-[#2B2B2B] mb-4">
-          Review Your Request
+          {t("title")}
         </h2>
         <div className="bg-[#FAF9F7] p-6 rounded-lg border border-[#E8E6E3] mb-6">
           <p className="text-[#2B2B2B]/80 leading-relaxed">
-            Please review your information below. This is a booking request, not
-            an instant booking. We'll review your request and get back to you
-            shortly to confirm availability and next steps.
+            {t("note")}
           </p>
         </div>
       </div>
@@ -41,20 +48,20 @@ export default function Step4Review({
       <div className="bg-white p-6 rounded-2xl border border-[#E8E6E3]">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-xl font-serif font-medium text-[#2B2B2B]">
-            Contact Information
+            {t("sections.contactInfo")}
           </h3>
           <button
             type="button"
             onClick={() => onEditStep(1)}
             className="text-sm text-[#2B2B2B]/70 hover:text-[#2B2B2B] underline transition-colors"
           >
-            Edit
+            {tCommon("edit")}
           </button>
         </div>
         <div className="space-y-3">
           <div>
             <div className="text-sm font-medium text-[#2B2B2B]/60 mb-1">
-              Chinese Name
+              {t("sections.chineseName")}
             </div>
             <div className="text-[#2B2B2B]">
               {formData.chineseLastName} {formData.chineseFirstName}
@@ -62,10 +69,10 @@ export default function Step4Review({
           </div>
           <div>
             <div className="text-sm font-medium text-[#2B2B2B]/60 mb-1">
-              English Name
+              {t("sections.englishName")}
             </div>
             <div className="text-[#2B2B2B]">
-              {formData.englishName || "Not provided"}
+              {formData.englishName || tCommon("notProvided")}
             </div>
           </div>
         </div>
@@ -74,7 +81,7 @@ export default function Step4Review({
       {/* Email and Phone Section */}
       <div className="bg-white p-6 rounded-2xl border border-[#E8E6E3]">
         <h3 className="text-xl font-serif font-medium text-[#2B2B2B] mb-4">
-          Contact Details
+          {t("sections.contactDetails")}
         </h3>
         <div className="space-y-4">
           <div>
@@ -82,7 +89,7 @@ export default function Step4Review({
               htmlFor="email"
               className="block text-sm font-medium text-[#2B2B2B] mb-2"
             >
-              Email Address *
+              {t("sections.email")} *
             </label>
             <input
               type="email"
@@ -91,7 +98,7 @@ export default function Step4Review({
               value={formData.email}
               onChange={(e) => updateFormData("email", e.target.value)}
               className="w-full px-4 py-3 border border-[#E8E6E3] rounded-lg focus:ring-2 focus:ring-[#FF7A5C] focus:border-transparent bg-[#FAF9F7] text-[#2B2B2B]"
-              placeholder="john@example.com"
+              placeholder={t("placeholders.email")}
             />
           </div>
           <div>
@@ -99,7 +106,7 @@ export default function Step4Review({
               htmlFor="phone"
               className="block text-sm font-medium text-[#2B2B2B] mb-2"
             >
-              Phone Number *
+              {t("sections.phone")} *
             </label>
             <input
               type="tel"
@@ -108,7 +115,7 @@ export default function Step4Review({
               value={formData.phone}
               onChange={(e) => updateFormData("phone", e.target.value)}
               className="w-full px-4 py-3 border border-[#E8E6E3] rounded-lg focus:ring-2 focus:ring-[#FF7A5C] focus:border-transparent bg-[#FAF9F7] text-[#2B2B2B]"
-              placeholder="+1 (555) 123-4567"
+              placeholder={t("placeholders.phone")}
             />
           </div>
         </div>
@@ -118,29 +125,29 @@ export default function Step4Review({
       <div className="bg-white p-6 rounded-2xl border border-[#E8E6E3]">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-xl font-serif font-medium text-[#2B2B2B]">
-            Class Details
+            {t("sections.classDetails")}
           </h3>
           <button
             type="button"
             onClick={() => onEditStep(2)}
             className="text-sm text-[#2B2B2B]/70 hover:text-[#2B2B2B] underline transition-colors"
           >
-            Edit
+            {tCommon("edit")}
           </button>
         </div>
         <div className="space-y-3">
           <div>
             <div className="text-sm font-medium text-[#2B2B2B]/60 mb-1">
-              Class Description
+              {t("sections.classDescription")}
             </div>
             <div className="text-[#2B2B2B]">
-              {formData.classDescription || "Not provided"}
+              {formData.classDescription || tCommon("notProvided")}
             </div>
           </div>
           {formData.preferredTimes && (
             <div>
               <div className="text-sm font-medium text-[#2B2B2B]/60 mb-1">
-                Preferred Times
+                {t("sections.preferredTimes")}
               </div>
               <div className="text-[#2B2B2B]">{formData.preferredTimes}</div>
             </div>
@@ -152,29 +159,29 @@ export default function Step4Review({
       <div className="bg-white p-6 rounded-2xl border border-[#E8E6E3]">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-xl font-serif font-medium text-[#2B2B2B]">
-            Access Option
+            {t("sections.accessOption")}
           </h3>
           <button
             type="button"
             onClick={() => onEditStep(3)}
             className="text-sm text-[#2B2B2B]/70 hover:text-[#2B2B2B] underline transition-colors"
           >
-            Edit
+            {tCommon("edit")}
           </button>
         </div>
         <div className="space-y-3">
           {formData.accessOption && (
             <div>
               <div className="text-sm font-medium text-[#2B2B2B]/60 mb-1">
-                Access Option
+                {t("sections.accessOption")}
               </div>
-              <div className="text-[#2B2B2B] capitalize">
+              <div className="text-[#2B2B2B]">
                 {formData.accessOption === "flexible"
-                  ? "Flexible Access"
+                  ? tStep3("options.flexible.title")
                   : formData.accessOption === "committed"
-                  ? "Committed Access"
+                  ? tStep3("options.committed.title")
                   : formData.accessOption === "resident"
-                  ? "Resident / Anchor Access"
+                  ? tStep3("options.resident.title")
                   : formData.accessOption}
               </div>
             </div>
@@ -182,7 +189,7 @@ export default function Step4Review({
           {formData.additionalNotes && (
             <div>
               <div className="text-sm font-medium text-[#2B2B2B]/60 mb-1">
-                Additional Notes
+                {t("sections.additionalNotes")}
               </div>
               <div className="text-[#2B2B2B]">{formData.additionalNotes}</div>
             </div>
@@ -194,48 +201,32 @@ export default function Step4Review({
       <div className="bg-white p-6 rounded-2xl border border-[#E8E6E3]">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-xl font-serif font-medium text-[#2B2B2B]">
-            Equipment & Technology
+            {t("sections.equipment")}
           </h3>
           <button
             type="button"
             onClick={() => onEditStep(4)}
             className="text-sm text-[#2B2B2B]/70 hover:text-[#2B2B2B] underline transition-colors"
           >
-            Edit
+            {tCommon("edit")}
           </button>
         </div>
         <div className="space-y-3">
           {formData.equipment && formData.equipment.length > 0 ? (
             <div>
               <div className="text-sm font-medium text-[#2B2B2B]/60 mb-2">
-                Selected Equipment
+                {t("sections.selectedEquipment")}
               </div>
               <div className="space-y-2">
-                {formData.equipment.map((equipmentId) => {
-                  const equipmentLabels: { [key: string]: string } = {
-                    projector: "Projector & Screen",
-                    whiteboard: "Whiteboard",
-                    "desks-chairs": "Desks and Chairs",
-                    "workout-mats": "Workout Mats",
-                    "yoga-blocks": "Yoga Blocks",
-                    "sound-system": "Sound System / Speakers",
-                    microphone: "Microphone",
-                    "laptop-computer": "Laptop / Computer",
-                    printer: "Printer",
-                    tables: "Tables",
-                    storage: "Storage Cabinets",
-                    none: "No additional equipment needed",
-                  };
-                  return (
-                    <div key={equipmentId} className="text-[#2B2B2B]">
-                      • {equipmentLabels[equipmentId] || equipmentId}
-                    </div>
-                  );
-                })}
+                {formData.equipment.map((equipmentId) => (
+                  <div key={equipmentId} className="text-[#2B2B2B]">
+                    • {tStep4(`equipment.${equipmentId}`)}
+                  </div>
+                ))}
               </div>
             </div>
           ) : (
-            <div className="text-[#2B2B2B]/60">No equipment selected</div>
+            <div className="text-[#2B2B2B]/60">{t("sections.noEquipment")}</div>
           )}
         </div>
       </div>

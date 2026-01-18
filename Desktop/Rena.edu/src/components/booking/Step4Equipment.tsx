@@ -1,3 +1,7 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+
 type FormData = {
   equipment: string[];
 };
@@ -7,25 +11,26 @@ type Step4EquipmentProps = {
   updateFormData: (field: keyof FormData, value: string[]) => void;
 };
 
-const equipmentOptions = [
-  { id: "projector", label: "Projector & Screen" },
-  { id: "whiteboard", label: "Whiteboard" },
-  { id: "desks-chairs", label: "Desks and Chairs" },
-  { id: "workout-mats", label: "Workout Mats" },
-  { id: "yoga-blocks", label: "Yoga Blocks" },
-  { id: "sound-system", label: "Sound System / Speakers" },
-  { id: "microphone", label: "Microphone" },
-  { id: "laptop-computer", label: "Laptop / Computer" },
-  { id: "printer", label: "Printer" },
-  { id: "tables", label: "Tables" },
-  { id: "storage", label: "Storage Cabinets" },
-  { id: "none", label: "No additional equipment needed" },
-];
-
 export default function Step4Equipment({
   formData,
   updateFormData,
 }: Step4EquipmentProps) {
+  const t = useTranslations("booking.step4");
+  
+  const equipmentOptions = [
+    { id: "projector" },
+    { id: "whiteboard" },
+    { id: "desks-chairs" },
+    { id: "workout-mats" },
+    { id: "yoga-blocks" },
+    { id: "sound-system" },
+    { id: "microphone" },
+    { id: "laptop-computer" },
+    { id: "printer" },
+    { id: "tables" },
+    { id: "storage" },
+    { id: "none" },
+  ];
   const handleEquipmentChange = (equipmentId: string, checked: boolean) => {
     if (equipmentId === "none") {
       // If "none" is selected, clear all other selections
@@ -45,10 +50,10 @@ export default function Step4Equipment({
     <div className="space-y-6">
       <div>
         <h2 className="text-3xl font-serif font-medium text-[#2B2B2B] mb-2">
-          Equipment & Technology
+          {t("title")}
         </h2>
         <p className="text-[#2B2B2B]/70 leading-relaxed">
-          Select any additional equipment or technology you'll need for your class.
+          {t("description")}
         </p>
       </div>
 
@@ -68,7 +73,7 @@ export default function Step4Equipment({
                 className="mr-3"
               />
               <span className="text-[#2B2B2B] font-medium text-sm">
-                {option.label}
+                {t(`equipment.${option.id}`)}
               </span>
             </label>
           ))}

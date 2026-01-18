@@ -1,3 +1,7 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+
 type FormNavigationProps = {
   currentStep: number;
   totalSteps: number;
@@ -14,11 +18,17 @@ export default function FormNavigation({
   totalSteps,
   onPrevious,
   onNext,
-  previousLabel = "Previous",
-  nextLabel = "Continue",
-  submitLabel = "Submit Request",
+  previousLabel,
+  nextLabel,
+  submitLabel,
   isSubmitting = false,
 }: FormNavigationProps) {
+  const t = useTranslations("common");
+  
+  const prevLabel = previousLabel || t("previous");
+  const nextLabelText = nextLabel || t("continue");
+  const submitLabelText = submitLabel || t("submitRequest");
+  const submittingText = t("submitting");
   const isFirstStep = currentStep === 1;
   const isLastStep = currentStep === totalSteps;
 
@@ -34,7 +44,7 @@ export default function FormNavigation({
             : "text-[#2B2B2B] hover:bg-[#FAF9F7]"
         }`}
       >
-        {previousLabel}
+        {prevLabel}
       </button>
 
       {isLastStep ? (
@@ -47,7 +57,7 @@ export default function FormNavigation({
               : "hover:bg-[#FF7A5C]/90"
           }`}
         >
-          {isSubmitting ? "Submitting..." : submitLabel}
+          {isSubmitting ? submittingText : submitLabelText}
         </button>
       ) : (
         <button
@@ -55,7 +65,7 @@ export default function FormNavigation({
           onClick={onNext}
           className="bg-[#2B2B2B] text-[#FAF9F7] px-6 py-3 rounded-full font-medium hover:bg-[#2B2B2B]/90 transition-colors"
         >
-          {nextLabel}
+          {nextLabelText}
         </button>
       )}
     </div>

@@ -1,17 +1,10 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+
 export default function Marquee() {
-  const items = [
-    "Weekly language classes",
-    "Certification programs",
-    "Skills workshops",
-    "Professional training",
-    "Test-prep sessions",
-    "Short-term intensives",
-    "Dance School",
-    "Theatre Class",
-    "Corporate Training",
-  ];
+  const t = useTranslations("homepage.marquee");
+  const items = t.raw("items") as string[];
 
   // Duplicate items for seamless loop
   const duplicatedItems = [...items, ...items];

@@ -1,0 +1,303 @@
+{
+  "common": {
+    "siteName": "Rena.edu",
+    "submitClass": "提交課程",
+    "bookTour": "預約參觀",
+    "theSpace": "場地介紹",
+    "previous": "上一步",
+    "continue": "繼續",
+    "edit": "編輯",
+    "submitting": "提交中...",
+    "submitRequest": "提交申請",
+    "notProvided": "未提供"
+  },
+  "homepage": {
+    "hero": {
+      "title": "為你在城市中心而設的專業教學空間",
+      "subtitle": "Ready When You Are",
+      "description": "設備完善的教室——為看重穩定、信譽和輕鬆的老師和機構而設。"
+    },
+    "useCases": {
+      "title": "教室用途包括",
+      "cards": {
+        "weeklyClass": {
+          "title": "開設固定周課",
+          "description": "你已經有學生。你需要每週都能用到同一間教室——但不想被租約和設施管理綁住。"
+        },
+        "testCourse": {
+          "title": "嘗試新課程",
+          "description": "推出試驗版，蒐集真實反饋，在長期投入前確認市場反應。"
+        },
+        "intensive": {
+          "title": "開設集訓或工作坊",
+          "description": "短期集中課程、考試準備、特題講座——完全合規，開課即可。"
+        },
+        "professionalTraining": {
+          "title": "為機構提供專業培訓",
+          "description": "協會、學院、公司需要一個正式的、營運順利的場地。"
+        },
+        "seminar": {
+          "title": "舉辦混合線上線下課程",
+          "description": "在專業環境中融合現場和遠端學習者——適合網路研討會、問答、分散式培訓。"
+        },
+        "popupClass": {
+          "title": "需要靈活的短期空間",
+          "description": "臨時課程、特邀講師、一次性活動——優質教室，無需長期合約。"
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "開始教學只需簡單幾步",
+      "steps": {
+        "1": {
+          "title": "先線上瞭解場所",
+          "description": "線上了解使用方案、價格邏輯等資訊。"
+        },
+        "2": {
+          "title": "提交課程申請",
+          "description": "填寫課程詳情，理想使用模式和時間。"
+        },
+        "3": {
+          "title": "參觀與實地確認",
+          "description": "計畫通過審核後，我們都會跟你預約介紹空間——確保彼此合適。"
+        },
+        "4": {
+          "title": "安排時間",
+          "description": "通過審核和課表確認，你的時間就鎖定了。"
+        }
+      }
+    },
+    "cta": {
+      "title": "下一步？"
+    },
+    "marquee": {
+      "items": [
+        "每週語言課程",
+        "認證計劃",
+        "技能工作坊",
+        "專業培訓",
+        "考試準備課程",
+        "短期密集課程",
+        "舞蹈學校",
+        "戲劇課程",
+        "企業培訓"
+      ]
+    }
+  },
+  "space": {
+    "hero": {
+      "title": "位置於城市中心的專業教學空間",
+      "description": "持證。設備完善。隨時可用。為認真教學而設計。"
+    },
+    "environment": {
+      "title": "為教學而生的教室",
+      "intro": "服務包括：",
+      "features": {
+        "licensed": "教育使用的持牌教室，符合持續教育課程規範",
+        "furnished": "精心維護、為學習而佈置的環境",
+        "simple": "設備齊全，無需老師額外設置",
+        "exclusive": "獨立教室，沒有噪音干擾"
+      },
+      "outro": "教學你負責，其他的一切都交給我們。"
+    },
+    "location": {
+      "title": "在城市中心設點意味著",
+      "description1": "教室位在城市的商業樞紐，亮麗的門面寬闊開揚。",
+      "description2": "這很重要，因為它意味著：",
+      "benefits": {
+        "accessible": "方便全市學生到達",
+        "transport": "靠近交通、辦公室和日常設施",
+        "professional": "適合在職專業人士和成人學習者",
+        "premium": "地理定位優越，從而為各類機構建立無聲的信任。"
+      },
+      "description3": "這不是隱祕的、臨時的小地方。位置本身傳達了可信度、空間本身為你加分。"
+    },
+    "pricing": {
+      "title": "費用方案：按規律程度定價",
+      "subtitle": "課程越穩定，費用越划算——就這麼簡單。",
+      "options": {
+        "flexible": {
+          "title": "靈活使用",
+          "subtitle": "適用於臨時或短期需要",
+          "features": [
+            "按小時預約",
+            "無固定每週承諾",
+            "最大靈活性",
+            "按小時計費（較高費率）"
+          ],
+          "note": "通常用於：特邀講師 · 單次工作坊 · 試驗課程 · 專題講座"
+        },
+        "committed": {
+          "title": "固定課程",
+          "subtitle": "周期性或常規課程",
+          "features": [
+            "固定週課程表（每週至少 4 小時）",
+            "折扣小時費率",
+            "熱門時段優先權",
+            "最低承諾期（至少一個月）"
+          ],
+          "note": "獨立老師 · 小型學院 · 職業協會 · 固定課程"
+        },
+        "resident": {
+          "title": "常駐使用",
+          "subtitle": "已成熟的、穩定的長期課程",
+          "features": [
+            "預留固定時段",
+            "最優的小時費率",
+            "排課的最高優先權",
+            "適合長期穩定運營（3 個月以上或每週 12 小時以上）"
+          ],
+          "note": "通常用於：學院 · 認證課程機構 · 機構合作夥伴 · 核心課程"
+        }
+      }
+    },
+    "audience": {
+      "title": "合作教師或專業人士對象",
+      "cards": {
+        "instructors": {
+          "title": "獨立教師",
+          "description": "你定期教課，想要一間可靠、專業的教室——但不想被經營場地的事務纏身。"
+        },
+        "academies": {
+          "title": "學院和專業協會",
+          "description": "你經營結構化的課程，需要一致性、合規性、中心位置。我們提供硬體和流程，你專心教學。"
+        },
+        "institutions": {
+          "title": "機構和企業培訓",
+          "description": "你需要正規場地、清楚的運營、透明的排課、可預測的成本。沒有驚喜，沒有混亂。"
+        },
+        "shortTerm": {
+          "title": "短期或專題課程",
+          "description": "你需要一間隨時可用的教室——工作坊、集訓、認證課程、特邀講座。不用長期綁約。"
+        }
+      }
+    },
+    "booking": {
+      "title": "預約流程簡單直接",
+      "steps": {
+        "1": {
+          "title": "先瞭解線上資訊",
+          "description": "了解場地運作方式以及方案適用情況。"
+        },
+        "2": {
+          "title": "提交教學或活動計畫申請",
+          "description": "提供課程內容、以及首選時段。"
+        },
+        "3": {
+          "title": "參觀與場所確認",
+          "description": "計畫通過審核後，我們會跟你預約介紹空間。"
+        },
+        "4": {
+          "title": "確認與排程",
+          "description": "現場考測通過和確認後，你的課表就定下來了"
+        }
+      }
+    },
+    "cta": {
+      "title": "準備好在這裡教學了嗎？"
+    },
+    "closing": {
+      "text1": "我們目的很簡單：提供一個穩定的教室，讓你專心教學。你不用管場地、不用擔心排課，地點在城市中心，自然吸引認真的學生來找你。",
+      "text2": "當老師教學變得有樂趣，學習便成為難忘的體驗。而我們把其他的處理好——這就是最好的合作結果。"
+    }
+  },
+  "booking": {
+    "step1": {
+      "title": "您的姓名",
+      "description": "請提供您的姓名資訊。",
+      "chineseLastName": "中文姓氏",
+      "chineseFirstName": "中文名字",
+      "englishName": "英文姓名",
+      "placeholders": {
+        "chineseLastName": "王",
+        "chineseFirstName": "小明",
+        "englishName": "John Doe"
+      }
+    },
+    "step2": {
+      "title": "課程詳情",
+      "description": "告訴我們您想教授的課程或計劃。",
+      "classDescription": "課程描述",
+      "preferredTimes": "首選時間",
+      "placeholders": {
+        "classDescription": "描述您的課程、主題和學習目標...",
+        "preferredTimes": "例如：週一晚上6-8點，或彈性的週間上午"
+      }
+    },
+    "step3": {
+      "title": "使用選項",
+      "description": "選擇最適合您需求的存取選項。",
+      "accessOption": "使用選項",
+      "additionalNotes": "其他備註",
+      "options": {
+        "flexible": {
+          "title": "彈性使用",
+          "description": "適用於臨時或短期使用"
+        },
+        "committed": {
+          "title": "承諾使用",
+          "description": "適用於每週或定期課程"
+        },
+        "resident": {
+          "title": "常駐/錨點使用",
+          "description": "適用於長期、高一致性使用"
+        }
+      },
+      "placeholder": "任何其他資訊或特殊要求..."
+    },
+    "step4": {
+      "title": "設備與技術",
+      "description": "選擇您課程所需的任何額外設備或技術。",
+      "equipment": {
+        "projector": "投影機與螢幕",
+        "whiteboard": "白板",
+        "desks-chairs": "桌椅",
+        "workout-mats": "運動墊",
+        "yoga-blocks": "瑜伽磚",
+        "sound-system": "音響系統/揚聲器",
+        "microphone": "麥克風",
+        "laptop-computer": "筆記型電腦/電腦",
+        "printer": "印表機",
+        "tables": "桌子",
+        "storage": "儲物櫃",
+        "none": "不需要額外設備"
+      }
+    },
+    "step5": {
+      "title": "審查您的申請",
+      "note": "請在下方審查您的資訊。這是預訂申請，不是即時預訂。我們將審查您的申請，並在短期內與您聯繫，確認可用性和後續步驟。",
+      "sections": {
+        "contactInfo": "聯絡資訊",
+        "contactDetails": "聯絡詳情",
+        "classDetails": "課程詳情",
+        "accessOption": "使用選項",
+        "equipment": "設備與技術",
+        "email": "電子郵件地址",
+        "phone": "電話號碼",
+        "chineseName": "中文姓名",
+        "englishName": "英文姓名",
+        "classDescription": "課程描述",
+        "preferredTimes": "首選時間",
+        "additionalNotes": "其他備註",
+        "selectedEquipment": "已選設備",
+        "noEquipment": "未選擇設備"
+      },
+      "placeholders": {
+        "email": "john@example.com",
+        "phone": "+1 (555) 123-4567"
+      }
+    },
+    "confirmation": {
+      "title": "申請已收到",
+      "thankYou": "感謝您",
+      "message": "您的預訂申請已收到。",
+      "description1": "我們已收到您的申請，將仔細審查。我們的團隊將在24小時內通過電話與您聯繫，討論可用性和後續步驟。",
+      "description2": "這是申請，不是即時預訂。我們將與您合作，找到最適合您需求的時間和使用選項。",
+      "urgent": "如果您有任何緊急問題，請隨時聯繫我們。"
+    }
+  },
+  "footer": {
+    "copyright": "© {year} Rena.edu",
+    "tagline": "持牌、設備齊全的教育空間"
+  }
+}

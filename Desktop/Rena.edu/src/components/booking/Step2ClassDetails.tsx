@@ -1,3 +1,7 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+
 type FormData = {
   classDescription: string;
   preferredTimes: string;
@@ -12,14 +16,16 @@ export default function Step2ClassDetails({
   formData,
   updateFormData,
 }: Step2ClassDetailsProps) {
+  const t = useTranslations("booking.step2");
+
   return (
     <div className="space-y-6">
       <div>
         <h2 className="text-3xl font-serif font-medium text-[#2B2B2B] mb-2">
-          Class Details
+          {t("title")}
         </h2>
         <p className="text-[#2B2B2B]/70 leading-relaxed">
-          Tell us about the class or program you'd like to teach.
+          {t("description")}
         </p>
       </div>
 
@@ -28,7 +34,7 @@ export default function Step2ClassDetails({
           htmlFor="classDescription"
           className="block text-sm font-medium text-[#2B2B2B] mb-2"
         >
-          Class Description
+          {t("classDescription")}
         </label>
         <textarea
           id="classDescription"
@@ -37,7 +43,7 @@ export default function Step2ClassDetails({
           value={formData.classDescription}
           onChange={(e) => updateFormData("classDescription", e.target.value)}
           className="w-full px-4 py-3 border border-[#E8E6E3] rounded-lg focus:ring-2 focus:ring-[#FF7A5C] focus:border-transparent bg-[#FAF9F7] text-[#2B2B2B]"
-          placeholder="Describe your class, subject matter, and learning objectives..."
+          placeholder={t("placeholders.classDescription")}
         />
       </div>
 
@@ -46,7 +52,7 @@ export default function Step2ClassDetails({
           htmlFor="preferredTimes"
           className="block text-sm font-medium text-[#2B2B2B] mb-2"
         >
-          Preferred Times
+          {t("preferredTimes")}
         </label>
         <input
           type="text"
@@ -54,7 +60,7 @@ export default function Step2ClassDetails({
           value={formData.preferredTimes}
           onChange={(e) => updateFormData("preferredTimes", e.target.value)}
           className="w-full px-4 py-3 border border-[#E8E6E3] rounded-lg focus:ring-2 focus:ring-[#FF7A5C] focus:border-transparent bg-[#FAF9F7] text-[#2B2B2B]"
-          placeholder="e.g., Mondays 6-8pm, or flexible weekday mornings"
+          placeholder={t("placeholders.preferredTimes")}
         />
       </div>
     </div>
