@@ -135,18 +135,19 @@ export default async function SpacePage() {
         </section>
         </ScrollReveal>
 
-        {/* Final CTA — premium dark section with atmospheric background image */}
+        {/* Final CTA — premium dark section with video loop background */}
         <section className="relative h-screen min-h-[100vh] overflow-hidden bg-base-dark">
-          {/* Background image — atmospheric, adds depth */}
+          {/* Background video — looping, muted for autoplay */}
           <div className="absolute inset-0">
-            <Image
-              src="/cta.jpeg"
-              alt=""
-              fill
-              className="object-cover"
-              sizes="100vw"
-              priority={false}
-            />
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover"
+            >
+              <source src="/learning.mp4" type="video/mp4" />
+            </video>
             {/* Overlay — darkens image for text readability */}
             <div
               className="absolute inset-0"
@@ -174,7 +175,7 @@ export default async function SpacePage() {
                   {t("finalCta.buttonSubmit")}
                 </Link>
                 <a
-                  href="https://wa.me/1234567890"
+                  href="https://wa.me/85363960321"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto inline-flex items-center justify-center px-8 md:px-10 py-4 rounded-full border border-base-light/60 text-base-light font-sans text-sm font-medium tracking-[0.2em] uppercase hover:bg-base-light/10 hover:border-base-light/80 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"

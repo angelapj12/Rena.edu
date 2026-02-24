@@ -15,16 +15,41 @@ export default function Footer() {
     const track = marqueeTrackRef.current;
     if (!track) return;
 
-    // Seamless infinite marquee — constant stately pace
-    const marqueeWidth = track.scrollWidth / 2; // Half = one full set for seamless loop
-    gsap.to(track, {
-      x: -marqueeWidth,
-      duration: 45,
-      ease: "none",
-      repeat: -1,
-    });
+    const runMarquee = () => {
+      gsap.killTweensOf(track);
+      const totalWidth = track.scrollWidth;
+      const halfWidth = totalWidth / 2; // Exactly 2 identical halves = seamless loop
+      if (halfWidth <= 0) return;
 
-    return () => gsap.killTweensOf(track);
+      gsap.set(track, { x: 0 });
+      gsap.to(track, {
+        x: -halfWidth,
+        duration: 45,
+        ease: "none",
+        repeat: -1,
+        repeatDelay: 0,
+        overwrite: "auto",
+        force3D: true,
+      });
+    };
+
+    // Wait for layout/fonts so scrollWidth is accurate
+    const raf = requestAnimationFrame(() => runMarquee());
+
+    // Re-run on resize (font size uses vw/vh) — debounce rapid fires
+    let resizeTimeout: ReturnType<typeof setTimeout>;
+    const ro = new ResizeObserver(() => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(runMarquee, 100);
+    });
+    ro.observe(track);
+
+    return () => {
+      cancelAnimationFrame(raf);
+      clearTimeout(resizeTimeout);
+      ro.disconnect();
+      gsap.killTweensOf(track);
+    };
   }, []);
 
   const marqueeText = t("watermark");
@@ -36,68 +61,70 @@ export default function Footer() {
   const gap = "gap-6 md:gap-8 lg:gap-10";
 
   return (
-    <footer className="bg-base-dark h-screen min-h-[100vh] flex flex-col overflow-x-hidden">
-      {/* 1. Utility — 3 columns, stretched evenly */}
-      <div className={`shrink-0 flex flex-col justify-center ${pad} py-12 md:py-16 lg:py-20`}>
-        <div className={`w-full grid grid-cols-1 md:grid-cols-[1fr_1fr_1fr] ${gap} items-stretch`}>
-          {/* Column 1 — slogan + nav links */}
-          <div className="flex flex-col gap-6 justify-center min-w-0">
-            <p className="text-quote font-sans font-normal leading-relaxed text-white/40">
+    <footer className="bg-base-dark max-md:min-h-0 md:h-screen md:min-h-[100vh] flex flex-col overflow-x-hidden">
+      {/* 1. Utility — left (slogan + links) | right (for students, for instructors) */}
+      <div className={`shrink-0 flex flex-col justify-center ${pad} py-8 md:py-16 lg:py-20`}>
+        <div className={`w-full flex flex-col md:flex-row ${gap} md:justify-between md:items-start`}>
+          {/* Left — slogan + quick links stacked vertically */}
+          <div className="flex flex-col gap-4 md:gap-5 min-w-0">
+            <p className="text-xl md:text-quote font-sans font-normal leading-relaxed text-white/60 md:text-white/40">
               {t("slogan")}
             </p>
-            <nav className="flex flex-col gap-3">
+            <nav className="flex flex-col gap-2">
               <Link
                 href="/"
-                className="text-base font-sans text-white/40 hover:text-white/60 leading-relaxed transition-colors duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
+                className="text-sm md:text-base font-sans text-white/40 hover:text-white/60 leading-relaxed transition-colors duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
               >
                 {t("nav.home")}
               </Link>
               <Link
                 href="/space"
-                className="text-base font-sans text-white/40 hover:text-white/60 leading-relaxed transition-colors duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
+                className="text-sm md:text-base font-sans text-white/40 hover:text-white/60 leading-relaxed transition-colors duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
               >
                 {t("nav.space")}
               </Link>
               <Link
                 href="/timetable"
-                className="text-base font-sans text-white/40 hover:text-white/60 leading-relaxed transition-colors duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
+                className="text-sm md:text-base font-sans text-white/40 hover:text-white/60 leading-relaxed transition-colors duration-300 ease-[cubic-bezier(0.25,0.46,0.45,0.94)]"
               >
                 {t("nav.timetable")}
               </Link>
             </nav>
           </div>
 
-          {/* Column 2 — For Students */}
-          <div className="flex flex-col gap-4 justify-center min-w-0">
-            <h3 className="text-base font-sans font-medium text-white/40">
-              {t("forStudents")}
-            </h3>
-            <Link
-              href="/space"
-              className="text-sm font-sans font-medium tracking-[0.15em] uppercase text-white/40 border-b border-white/40 pb-1 w-fit hover:border-accent hover:text-accent transition-colors duration-300"
-            >
-              {t("joinCommunity")} →
-            </Link>
-          </div>
-
-          {/* Column 3 — For Instructors */}
-          <div className="flex flex-col gap-4 justify-center min-w-0">
-            <h3 className="text-base font-sans font-medium text-white/40">
-              {t("forInstructors")}
-            </h3>
-            <Link
-              href="/book"
-              className="text-sm font-sans font-medium tracking-[0.15em] uppercase text-white/40 border-b border-white/40 pb-1 w-fit hover:border-accent hover:text-accent transition-colors duration-300"
-            >
-              {t("teachWithUs")} →
-            </Link>
+          {/* Right — for students, link | for instructors, link */}
+          <div className="flex flex-col gap-6 md:gap-8 min-w-0 md:text-right">
+            <div className="flex flex-col gap-2">
+              <h3 className="text-xs font-sans font-medium tracking-[0.15em] uppercase text-white/30 md:text-white/40">
+                {t("forStudents")}
+              </h3>
+              <a
+                href="https://whatsapp.com/channel/0029Vb7MW6NI7BeM6rowMB2f"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-sans font-medium tracking-[0.15em] uppercase text-white/40 border-b border-white/40 pb-1 w-fit hover:border-accent hover:text-accent transition-colors duration-300 md:ml-auto"
+              >
+                {t("joinCommunity")} →
+              </a>
+            </div>
+            <div className="flex flex-col gap-2">
+              <h3 className="text-xs font-sans font-medium tracking-[0.15em] uppercase text-white/30 md:text-white/40">
+                {t("forInstructors")}
+              </h3>
+              <Link
+                href="/book"
+                className="text-sm font-sans font-medium tracking-[0.15em] uppercase text-white/40 border-b border-white/40 pb-1 w-fit hover:border-accent hover:text-accent transition-colors duration-300 md:ml-auto"
+              >
+                {t("teachWithUs")} →
+              </Link>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* 2. Marquee — fills remaining space */}
+      {/* 2. Marquee — text fills container height (max size) */}
       <div
-        className="flex-1 min-h-0 w-full overflow-hidden flex items-center"
+        className="max-md:shrink-0 max-md:min-h-24 max-md:border-t max-md:border-white/10 md:flex-1 md:min-h-0 w-full overflow-hidden flex items-center"
         style={{
           maskImage:
             "linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)",
@@ -108,13 +135,16 @@ export default function Footer() {
         <div className="flex items-center w-full h-full">
           <div
             ref={marqueeTrackRef}
-            className="flex items-center whitespace-nowrap will-change-transform"
+            className="flex items-center h-full whitespace-nowrap will-change-transform"
           >
             {marqueeItems.map((item, i) => (
               <span
                 key={i}
-                className="text-[6vw] sm:text-[8vw] md:text-[12vw] lg:text-[16vw] xl:text-[20vw] font-bold uppercase text-white/40 tracking-tighter px-3 md:px-6 mr-8 md:mr-16 lg:mr-24"
-                style={{ fontFamily: "var(--font-sans)" }}
+                className="font-bold uppercase text-white/30 md:text-white/40 tracking-tighter leading-none mr-4 md:mr-8 flex items-center h-full"
+                style={{
+                  fontFamily: "var(--font-sans)",
+                  fontSize: "min(20vw, 50vh)",
+                }}
               >
                 {item}
               </span>
@@ -124,8 +154,8 @@ export default function Footer() {
       </div>
 
       {/* 3. Legals */}
-      <div className={`shrink-0 ${pad} py-6 md:py-8 border-t border-white/10`}>
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div className={`shrink-0 ${pad} py-4 md:py-8 border-t border-white/10`}>
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-4">
           <p className="text-xs font-sans text-white/40">
             {t("copyright", { year: new Date().getFullYear() })}{" "}
             <Link

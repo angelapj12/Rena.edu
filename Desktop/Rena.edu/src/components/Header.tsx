@@ -57,10 +57,10 @@ export default function Header() {
               {t("submitClass")}
             </Link>
 
-            {/* 2-line hamburger */}
+            {/* 2-line hamburger — 44px min touch target */}
             <button
               onClick={() => setMenuOpen(true)}
-              className="flex flex-col gap-1.5 p-1 text-base-dark"
+              className="flex flex-col gap-1.5 items-center justify-center min-h-[44px] min-w-[44px] p-3 text-base-dark"
               aria-label="Open menu"
             >
               <span className="block w-6 h-0.5 bg-current" />
@@ -81,7 +81,7 @@ export default function Header() {
         <div className="h-full flex flex-col justify-center items-center px-6 md:px-8 lg:px-12">
           <button
             onClick={() => setMenuOpen(false)}
-            className="absolute top-8 right-12 md:right-20 text-base-light/70 hover:text-white text-sm tracking-widest uppercase font-sans transition-colors"
+            className="absolute top-8 right-6 md:right-20 flex items-center justify-center min-h-[44px] min-w-[44px] text-base-light/70 hover:text-white text-sm tracking-widest uppercase font-sans transition-colors"
             aria-label="Close menu"
           >
             Close
@@ -100,10 +100,10 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="absolute bottom-12 left-12 md:left-20 flex gap-6">
+          <div className="absolute bottom-12 left-6 md:left-20 flex gap-4">
             <button
               onClick={() => switchLocale("en")}
-              className={`text-sm tracking-[0.2em] uppercase font-sans transition-colors ${
+              className={`min-h-[44px] px-4 flex items-center justify-center text-sm tracking-[0.2em] uppercase font-sans transition-colors ${
                 currentLocale === "en" ? "text-accent" : "text-base-light/60 hover:text-base-light"
               }`}
             >
@@ -111,7 +111,7 @@ export default function Header() {
             </button>
             <button
               onClick={() => switchLocale("zh-TW")}
-              className={`text-sm tracking-[0.2em] uppercase font-sans transition-colors ${
+              className={`min-h-[44px] px-4 flex items-center justify-center text-sm tracking-[0.2em] uppercase font-sans transition-colors ${
                 currentLocale === "zh-TW" ? "text-accent" : "text-base-light/60 hover:text-base-light"
               }`}
             >

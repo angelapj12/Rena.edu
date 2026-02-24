@@ -87,7 +87,7 @@ export default function HowToGetStarted() {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 sm:gap-8">
               <a
-                href="https://wa.me/1234567890"
+                href="https://wa.me/85363960321"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm font-sans font-medium tracking-[0.15em] uppercase text-base-dark border-b border-base-dark pb-1 w-fit hover:border-accent hover:text-accent transition-colors duration-300"

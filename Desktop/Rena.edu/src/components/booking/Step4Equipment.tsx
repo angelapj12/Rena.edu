@@ -62,7 +62,7 @@ export default function Step4Equipment({
           {equipmentOptions.map((option) => (
             <label
               key={option.id}
-              className="flex items-center p-3 border border-secondary-light rounded-lg cursor-pointer hover:border-base-dark/20 transition-colors"
+              className="flex items-center p-4 border border-secondary-light rounded-lg cursor-pointer hover:border-base-dark/20 transition-colors"
             >
               <input
                 type="checkbox"

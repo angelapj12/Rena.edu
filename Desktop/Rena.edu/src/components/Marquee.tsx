@@ -14,14 +14,14 @@ export default function Marquee({ translationsKey = "space.marquee" }: MarqueePr
   const duplicatedItems = [...items, ...items];
 
   return (
-    <div className="overflow-hidden py-8 md:py-10 bg-secondary-light">
+    <div className="overflow-hidden py-4 md:py-6 bg-secondary-light">
       <div className="relative">
         <div className="flex animate-marquee whitespace-nowrap">
           {duplicatedItems.map((item, index) => (
-            <span key={index} className="text-lead text-base-dark/70 font-sans">
+            <span key={index} className="text-xl md:text-2xl lg:text-3xl text-base-dark/70 font-sans">
               {item}
               {index < duplicatedItems.length - 1 && (
-                <span className="mx-6">·</span>
+                <span className="mx-4">·</span>
               )}
             </span>
           ))}

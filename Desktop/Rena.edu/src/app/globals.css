@@ -54,16 +54,16 @@ body {
   .text-h3 {
     @apply text-xl md:text-2xl font-sans font-normal leading-snug;
   }
-  /* Quotes — EN: leading-loose. zh-TW: 1.65 (official standard per DESIGN.md). */
+  /* Quotes — tightened line height for both locales */
   .text-quote {
-    @apply text-2xl md:text-3xl lg:text-4xl font-sans font-normal leading-loose;
+    @apply text-2xl md:text-3xl lg:text-4xl font-sans font-normal leading-relaxed;
   }
   .text-quote-lg {
-    @apply text-3xl md:text-4xl lg:text-5xl font-sans font-normal leading-loose;
+    @apply text-3xl md:text-4xl lg:text-5xl font-sans font-normal leading-relaxed;
   }
   [lang="zh-TW"] .text-quote,
   [lang="zh-TW"] .text-quote-lg {
-    line-height: 1.65;
+    line-height: 1.5;
   }
   /* Body */
   .text-lead {
@@ -101,6 +101,47 @@ body {
 
 .animate-marquee {
   animation: marquee 30s linear infinite;
+}
+
+/* Typeform-style form inputs — clean, minimal, underline focus */
+[data-typeform] input[type="text"],
+[data-typeform] input[type="email"],
+[data-typeform] input[type="tel"],
+[data-typeform] textarea {
+  @apply w-full border-0 border-b-2 border-secondary-light rounded-none bg-transparent px-0 py-0 pb-3 text-lg md:text-xl font-sans text-base-dark placeholder:text-base-dark/40 focus:ring-0 focus:border-accent focus:outline-none transition-colors duration-200;
+}
+[data-typeform] input::placeholder,
+[data-typeform] textarea::placeholder {
+  @apply text-base-dark/40;
+}
+[data-typeform] label {
+  @apply text-base-dark/70 text-sm font-medium mb-2 block;
+}
+[data-typeform] .space-y-6 > div:first-child h2 {
+  @apply text-2xl md:text-3xl lg:text-4xl font-sans font-normal text-base-dark mb-3;
+}
+[data-typeform] .space-y-6 > div:first-child p {
+  @apply text-base md:text-lg text-base-dark/70 mb-8;
+}
+
+/* Step transition — subtle fade */
+@keyframes typeform-step-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+[data-typeform] [data-step-content] {
+  animation: typeform-step-enter 0.4s ease-out forwards;
+}
+
+/* Review step — flatten nested cards in typeform */
+[data-typeform] [data-step-content] .bg-white {
+  @apply bg-base-light-subtle/50 border-secondary-light/60;
 }
 
 /* Premium list bullets — small accent diamond instead of default dot */

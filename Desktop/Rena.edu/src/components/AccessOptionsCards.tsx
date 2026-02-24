@@ -62,7 +62,7 @@ export default function AccessOptionsCards({ highlightedIndex = null }: AccessOp
             key={key}
             data-pricing-card
             className={`
-              p-8 lg:p-10 rounded-2xl flex flex-col min-h-[420px] relative
+              p-8 lg:p-10 rounded-2xl flex flex-col min-h-[320px] md:min-h-[420px] relative
               transition-all duration-300 ease-out border
               ${isHighlighted
                 ? "scale-[1.02] -translate-y-1 md:-translate-y-2 z-20 bg-secondary-light border-accent/30 shadow-[0_4px_24px_rgba(0,0,0,0.15)]"

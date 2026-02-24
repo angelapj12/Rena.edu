@@ -169,9 +169,9 @@ export default function BookPage() {
     return (
       <>
         <Header />
-        <main className="min-h-screen bg-base-light-subtle py-12 px-6 md:px-8 lg:px-12">
+        <main className="min-h-screen bg-base-light-subtle py-6 px-4 md:py-12 md:px-8 lg:px-12">
           <div className="w-full max-w-3xl mx-auto">
-            <div className="bg-white p-10 rounded-2xl border border-secondary-light">
+            <div className="max-md:bg-transparent max-md:border-0 max-md:rounded-none max-md:p-0 md:bg-white md:p-10 md:rounded-2xl md:border md:border-secondary-light">
               <Confirmation
                 name={formData.englishName || formData.chineseFirstName || ""}
               />
@@ -186,18 +186,19 @@ export default function BookPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-base-light-subtle py-12 px-6 md:px-8 lg:px-12">
-        <div className="w-full max-w-3xl mx-auto">
-          <StepIndicator currentStep={currentStep} totalSteps={totalSteps} />
-
-          <div className="bg-white p-10 rounded-2xl border border-secondary-light">
+      <StepIndicator currentStep={currentStep} totalSteps={totalSteps} variant="typeform" />
+      <main className="min-h-screen bg-base-light-subtle pt-24 pb-12 px-4 md:pt-28 md:pb-16 md:px-8 lg:px-12">
+        <div className="w-full max-w-2xl mx-auto min-h-[calc(100vh-8rem)] flex flex-col">
+          <div className="max-md:bg-transparent max-md:border-0 max-md:rounded-none max-md:p-0 md:bg-white md:p-10 md:rounded-2xl md:border md:border-secondary-light flex-1 flex flex-col">
             {submitError && (
               <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
                 <p className="text-red-800 text-sm">{submitError}</p>
               </div>
             )}
-            <form onSubmit={handleSubmit}>
-              {renderCurrentStep()}
+            <form onSubmit={handleSubmit} className="flex flex-col flex-1" data-typeform>
+              <div className="flex-1 flex flex-col justify-center py-8 md:py-12" data-step-content key={currentStep}>
+                {renderCurrentStep()}
+              </div>
 
               <FormNavigation
                 currentStep={currentStep}
@@ -205,6 +206,7 @@ export default function BookPage() {
                 onPrevious={prevStep}
                 onNext={nextStep}
                 isSubmitting={isSubmitting}
+                variant="typeform"
               />
             </form>
           </div>

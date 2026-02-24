@@ -8,7 +8,7 @@ export default function RenaissanceSpirit() {
   const t = useTranslations("homepage.renaissanceSpirit");
 
   return (
-    <section className="relative overflow-hidden bg-base-light h-screen grid grid-cols-1 md:grid-cols-2 px-6 md:px-8 lg:px-12 py-12 md:py-16">
+    <section className="relative overflow-hidden bg-base-light min-h-screen md:h-screen grid grid-cols-1 md:grid-cols-2 px-6 md:px-8 lg:px-12 py-12 md:py-16">
       {/* Subtle full-width background for immersive feel */}
       <div className="absolute inset-0 opacity-[0.03]" aria-hidden>
         <Image
@@ -47,7 +47,7 @@ export default function RenaissanceSpirit() {
       </div>
 
       {/* Right half — image, margin on top/bottom/right (from section padding) */}
-      <div className="relative w-full h-[40vh] md:h-full min-h-[300px] order-1 md:order-2 overflow-hidden rounded-2xl">
+      <div className="relative w-full h-[28vh] min-h-[200px] md:h-full md:min-h-[300px] order-1 md:order-2 overflow-hidden rounded-2xl">
         <Image
           src="/spirit.png"
           alt="Renaissance space"
