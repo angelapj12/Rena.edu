@@ -12,7 +12,7 @@ export default function RenaissanceSpirit() {
       {/* Subtle full-width background for immersive feel */}
       <div className="absolute inset-0 opacity-[0.03]" aria-hidden>
         <Image
-          src="/Spirit.png"
+          src="/spirit.png"
           alt=""
           fill
           className="object-cover"
@@ -49,19 +49,13 @@ export default function RenaissanceSpirit() {
       {/* Right half — image, margin on top/bottom/right (from section padding) */}
       <div className="relative w-full h-[40vh] md:h-full min-h-[300px] order-1 md:order-2 overflow-hidden rounded-2xl">
         <Image
-          src="/Spirit.png"
+          src="/spirit.png"
           alt="Renaissance space"
           fill
           className="object-cover grayscale"
           sizes="(max-width: 768px) 100vw, 50vw"
           priority
         />
-        <Link
-          href="/space"
-          className="absolute bottom-4 right-4 z-10 text-sm font-sans text-base-dark/80 hover:text-base-dark transition-colors"
-        >
-          {t("imageCaption")} →
-        </Link>
       </div>
     </section>
   );
