@@ -1,7 +1,3 @@
-"use client";
-
-import { useTranslations } from "next-intl";
-
 type FormData = {
   chineseLastName: string;
   chineseFirstName: string;
@@ -17,25 +13,23 @@ export default function Step1Contact({
   formData,
   updateFormData,
 }: Step1ContactProps) {
-  const t = useTranslations("booking.step1");
-
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-3xl font-serif font-medium text-[#2B2B2B] mb-2">
-          {t("title")}
+        <h2 className="text-h2-compact text-base-dark mb-2">
+          Your Name
         </h2>
-        <p className="text-[#2B2B2B]/70 leading-relaxed">
-          {t("description")}
+        <p className="text-body-lg text-base-dark/70">
+          Please provide your name information.
         </p>
       </div>
 
       <div>
         <label
           htmlFor="chineseLastName"
-          className="block text-sm font-medium text-[#2B2B2B] mb-2"
+          className="block text-sm font-medium text-base-dark mb-2"
         >
-          {t("chineseLastName")}
+          Chinese Last Name
         </label>
         <input
           type="text"
@@ -43,17 +37,17 @@ export default function Step1Contact({
           required
           value={formData.chineseLastName}
           onChange={(e) => updateFormData("chineseLastName", e.target.value)}
-          className="w-full px-4 py-3 border border-[#E8E6E3] rounded-lg focus:ring-2 focus:ring-[#FF7A5C] focus:border-transparent bg-[#FAF9F7] text-[#2B2B2B]"
-          placeholder={t("placeholders.chineseLastName")}
+          className="w-full px-4 py-3 border border-secondary-light rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent bg-base-light-subtle text-base-dark"
+          placeholder="王"
         />
       </div>
 
       <div>
         <label
           htmlFor="chineseFirstName"
-          className="block text-sm font-medium text-[#2B2B2B] mb-2"
+          className="block text-sm font-medium text-base-dark mb-2"
         >
-          {t("chineseFirstName")}
+          Chinese First Name
         </label>
         <input
           type="text"
@@ -61,17 +55,17 @@ export default function Step1Contact({
           required
           value={formData.chineseFirstName}
           onChange={(e) => updateFormData("chineseFirstName", e.target.value)}
-          className="w-full px-4 py-3 border border-[#E8E6E3] rounded-lg focus:ring-2 focus:ring-[#FF7A5C] focus:border-transparent bg-[#FAF9F7] text-[#2B2B2B]"
-          placeholder={t("placeholders.chineseFirstName")}
+          className="w-full px-4 py-3 border border-secondary-light rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent bg-base-light-subtle text-base-dark"
+          placeholder="小明"
         />
       </div>
 
       <div>
         <label
           htmlFor="englishName"
-          className="block text-sm font-medium text-[#2B2B2B] mb-2"
+          className="block text-sm font-medium text-base-dark mb-2"
         >
-          {t("englishName")}
+          English Name
         </label>
         <input
           type="text"
@@ -79,8 +73,8 @@ export default function Step1Contact({
           required
           value={formData.englishName}
           onChange={(e) => updateFormData("englishName", e.target.value)}
-          className="w-full px-4 py-3 border border-[#E8E6E3] rounded-lg focus:ring-2 focus:ring-[#FF7A5C] focus:border-transparent bg-[#FAF9F7] text-[#2B2B2B]"
-          placeholder={t("placeholders.englishName")}
+          className="w-full px-4 py-3 border border-secondary-light rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent bg-base-light-subtle text-base-dark"
+          placeholder="John Doe"
         />
       </div>
     </div>

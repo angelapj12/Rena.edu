@@ -12,7 +12,6 @@ import Step4Equipment from "@/components/booking/Step4Equipment";
 import Step5Review from "@/components/booking/Step4Review";
 import Confirmation from "@/components/booking/Confirmation";
 import { supabase } from "@/lib/supabase";
-import { useTranslations } from "next-intl";
 
 type FormData = {
   chineseLastName: string;
@@ -28,7 +27,6 @@ type FormData = {
 };
 
 export default function BookPage() {
-  const t = useTranslations("booking.step5");
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -171,9 +169,9 @@ export default function BookPage() {
     return (
       <>
         <Header />
-        <main className="min-h-screen bg-[#FAF9F7] py-12 px-4">
-          <div className="max-w-3xl mx-auto">
-            <div className="bg-white p-10 rounded-2xl border border-[#E8E6E3]">
+        <main className="min-h-screen bg-base-light-subtle py-12 px-6 md:px-8 lg:px-12">
+          <div className="w-full max-w-3xl mx-auto">
+            <div className="bg-white p-10 rounded-2xl border border-secondary-light">
               <Confirmation
                 name={formData.englishName || formData.chineseFirstName || ""}
               />
@@ -188,11 +186,11 @@ export default function BookPage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-[#FAF9F7] py-12 px-4">
-        <div className="max-w-3xl mx-auto">
+      <main className="min-h-screen bg-base-light-subtle py-12 px-6 md:px-8 lg:px-12">
+        <div className="w-full max-w-3xl mx-auto">
           <StepIndicator currentStep={currentStep} totalSteps={totalSteps} />
 
-          <div className="bg-white p-10 rounded-2xl border border-[#E8E6E3]">
+          <div className="bg-white p-10 rounded-2xl border border-secondary-light">
             {submitError && (
               <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
                 <p className="text-red-800 text-sm">{submitError}</p>

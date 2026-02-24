@@ -1,6 +1,30 @@
 {
+  "NotFoundPage": {
+    "title": "Page Not Found",
+    "description": "The page you're looking for doesn't exist.",
+    "backHome": "Back to Home"
+  },
+  "Error": {
+    "title": "Something went wrong",
+    "retry": "Try again"
+  },
+  "placeholder": {
+    "timetable": {
+      "title": "Timetable",
+      "description": "Class schedules and availability will be published here soon."
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "description": "Our privacy policy is being prepared. Please check back soon."
+    },
+    "cookies": {
+      "title": "Cookies Policy",
+      "description": "Our cookies policy is being prepared. Please check back soon."
+    }
+  },
   "common": {
     "siteName": "Rena.edu",
+    "navBrand": "RENAISSANCE",
     "submitClass": "Submit a Class",
     "bookTour": "Book a Tour",
     "theSpace": "The Space",
@@ -12,76 +36,73 @@
     "notProvided": "Not provided"
   },
   "homepage": {
-    "hero": {
-      "title": "A Licensed Teaching Studio. Built for Intentional,Professional Use",
-      "subtitle": "Ready When You Are",
-      "description": "A fully equipped, compliant classroom in the city's core—designed for instructors and organizations who value predictability, credibility, and ease. You arrive. You teach. We handle the rest."
+    "renaissanceSpirit": {
+      "label": "The Renaissance Spirit",
+      "title": "The Renaissance Spirit",
+      "mission": "We believe education is cultural, emotional, and deeply human. Our mission is to create spaces where learning inspires life.",
+      "paragraph1": "We curate classes that matter — designed to engage, challenge, and transform.",
+      "paragraph2": "Renaissance is not just a learning center. It's a creative incubator where instructors and students grow together — celebrating progress over perfection.",
+      "cta": "EXPLORE THE SPACE",
+      "imageCaption": "The Space"
     },
-    "useCases": {
-      "title": "An urban solution to your education needs.",
-      "cards": {
-        "weeklyClass": {
-          "title": "Run a Weekly Class",
-          "description": "You have students. You need a consistent, licensed space every week—without managing a lease or facility."
-        },
-        "testCourse": {
-          "title": "Test a New Course",
-          "description": "Launch a pilot, gather real feedback, validate market fit before long-term commitment."
-        },
-        "intensive": {
-          "title": "Host an Intensive or Workshop",
-          "description": "Short-term programs, exam prep, specialized sessions—fully compliant and ready to teach in."
-        },
-        "professionalTraining": {
-          "title": "Deliver Professional Training",
-          "description": "For associations, academies, and organizations that require a licensed, central venue."
-        },
-        "seminar": {
-          "title": "Host a Hybrid Learning Session",
-          "description": "Blend in-person and remote participants in a professional setting—ideal for webinars, Q&As, and distributed training."
-        },
-        "popupClass": {
-          "title": "Book Flexible, Short-Term Access",
-          "description": "Ad-hoc sessions, guest instructors, one-off events—premium space, no long-term contract required."
-        }
-      }
+    "ourVision": {
+      "label": "OUR VISION",
+      "title": "Our Vision",
+      "line1": "Learning should feel alive —\nlike discovery, like possibility,\nlike becoming who you are meant to be.",
+      "line2Before": "We are building a community where education is not passive, but experiential —",
+      "line2Highlight": "Learning as an Experience (LaaE)",
+      "line2After": "— immersive, human, and transformative.",
+      "line3": "Here, teaching feels alive again.",
+      "line4": "We believe we rise by lifting others, creating a space where inspired instructors and curious minds grow together."
     },
-    "howItWorks": {
-      "title": "How To Get Started",
+    "teachAtRenaissance": {
+      "label": "Teach at Renaissance",
+      "title": "Teach at Renaissance",
+      "quote": "Learning is not mechanical.\nIt's creative work. So is teaching.",
+      "paragraph1": "You didn't choose to teach for routine. You chose it to inspire, connect, and share your craft with passion.",
+      "paragraph2": "At Renaissance, we believe teaching should spark joy — not burnout."
+    },
+    "howToGetStarted": {
+      "label": "GET STARTED",
+      "title": "How to Get Started",
+      "headline": "Your path to teaching at Renaissance",
+      "ctaPrompt": "Ready to take the first step?",
       "steps": {
         "1": {
-          "title": "Explore the Space",
-          "description": "Review our access options, pricing logic, and use cases online."
+          "number": "01",
+          "title": "Get to know us online",
+          "description": "Learn how it works.",
+          "cta": "Explore the Space"
         },
         "2": {
-          "title": "Submit Your Request",
-          "description": "Tell us what you plan to teach and when you'd like to use the space."
+          "number": "02",
+          "title": "Submit your class for review",
+          "description": "Tell us about your class.",
+          "cta": "Submit a Class"
         },
         "3": {
-          "title": "Review & Tour",
-          "description": "For all types of requests, we'll schedule a brief tour to introduce you to the space and confirm fit."
+          "number": "03",
+          "title": "Submit credentials for compliance",
+          "description": "Once the class is initially approved, instructor has to submit teaching credentials and relevant documents for compliant review."
         },
         "4": {
-          "title": "Get Scheduled",
-          "description": "Once approved, your time is reserved."
+          "number": "04",
+          "title": "Class is scheduled and live",
+          "description": "Once official compliance is approved, the class is scheduled and live!"
         }
       }
     },
-    "cta": {
-      "title": "What Comes Next?"
+    "hero": {
+      "title": "Teach. Build. Belong.",
+      "subLink1": "The Space →",
+      "subLink2": "Submit a Class →",
+      "description": "Step into Rena and discover the optimal space for teaching, learning, and building real communities. Join us to elevate your practice and connect with like-minded instructors.",
+      "buttonStudents": "STUDENTS",
+      "buttonInstructors": "INSTRUCTORS"
     },
-    "marquee": {
-      "items": [
-        "Weekly language classes",
-        "Certification programs",
-        "Skills workshops",
-        "Professional training",
-        "Test-prep sessions",
-        "Short-term intensives",
-        "Dance School",
-        "Theatre Class",
-        "Corporate Training"
-      ]
+    "cta": {
+      "label": "WHAT'S NEXT",
+      "title": "What Comes Next?"
     }
   },
   "space": {
@@ -90,18 +111,27 @@
       "description": "A Classroom Built for Real Teaching"
     },
     "environment": {
-      "title": "The Environment",
-      "intro": "A Classroom Built for Serious Instructors",
+      "label": "THE SPACE",
+      "intro": "This space is designed for instructors who understand that environment shapes teaching.",
+      "title": "A Classroom Built for Serious Instructors",
+      "titleLines": {
+        "1": "A Classroom Built for",
+        "2": "Serious Instructors",
+        "3": "",
+        "4": ""
+      },
       "features": {
         "licensed": "Licensed and compliant for education use",
         "furnished": "Fully furnished and professionally maintained",
         "simple": "Equipped for immediate use—no setup required",
         "exclusive": "One class at a time—no noise overlap or scheduling conflicts"
       },
-      "outro": "You arrive ready to teach. We handle everything else."
+      "cta": "Book a Tour"
     },
     "location": {
-      "title": "Why Central Location Matters",
+      "label": "THE LOCATION",
+      "title": "In the Heart of the City",
+      "quote": "Our space anchors Renaissance in the community —\na place to gather, learn, and connect.",
       "description1": "The studio is located in the city's professional core, within a high-quality commercial building designed for serious business use.",
       "description2": "This matters because it means:",
       "benefits": {
@@ -110,11 +140,13 @@
         "professional": "Suitable for working professionals and adult learners",
         "premium": "Positioned as a premium, intentional learning experience"
       },
-      "description3": "The venue does part of your credibility work for you."
+      "description3": "The venue does part of your credibility work for you.",
+      "cta": "The Space →"
     },
     "pricing": {
-      "title": "Access Options: Priced by Commitment",
-      "subtitle": "We price based on predictability — More consistency means better rates—it's that simple.",
+      "label": "ACCESS OPTIONS",
+      "title": "Choose the perfect access option for your teaching needs",
+      "subtitle": "We price based on predictability — More consistency means better rates.",
       "options": {
         "flexible": {
           "title": "Flexible Access",
@@ -151,16 +183,61 @@
         }
       }
     },
+    "useCases": {
+      "label": "USE CASES",
+      "title": "An urban solution to your education needs.",
+      "cards": {
+        "weeklyClass": {
+          "title": "Run a Weekly Class",
+          "description": "You have students. You need a consistent, licensed space every week—without managing a lease or facility."
+        },
+        "testCourse": {
+          "title": "Test a New Course",
+          "description": "Launch a pilot, gather real feedback, validate market fit before long-term commitment."
+        },
+        "intensive": {
+          "title": "Host an Intensive or Workshop",
+          "description": "Short-term programs, exam prep, specialized sessions—fully compliant and ready to teach in."
+        },
+        "professionalTraining": {
+          "title": "Deliver Professional Training",
+          "description": "For associations, academies, and organizations that require a licensed, central venue."
+        },
+        "seminar": {
+          "title": "Host a Hybrid Learning Session",
+          "description": "Blend in-person and remote participants in a professional setting—ideal for webinars, Q&As, and distributed training."
+        },
+        "popupClass": {
+          "title": "Book Flexible, Short-Term Access",
+          "description": "Ad-hoc sessions, guest instructors, one-off events—premium space, no long-term contract required."
+        }
+      }
+    },
+    "marquee": {
+      "items": [
+        "Weekly language classes",
+        "Certification programs",
+        "Skills workshops",
+        "Professional training",
+        "Test-prep sessions",
+        "Short-term intensives",
+        "Dance School",
+        "Theatre Class",
+        "Corporate Training"
+      ]
+    },
     "audience": {
-      "title": "Who This Space Works Best For",
+      "label": "WHO IT'S FOR",
+      "intro1": "Imagine a Class That Feels Like a Game — Not a Chore",
+      "intro2": "You arrive ready to teach. We handle everything else.",
       "cards": {
         "instructors": {
           "title": "Independent Instructors",
-          "description": "You teach regularly. You want a reliable, professional classroom without the burden of running a facility. This is built for you."
+          "description": "You run structured programs that demand consistency, licensing, compliance, and central access. We provide the infrastructure so you focus on instruction."
         },
         "academies": {
           "title": "Academies & Associations",
-          "description": "You run structured programs that demand consistency, licensing, compliance, and central access. We provide the infrastructure so you focus on instruction."
+          "description": "You teach regularly. You want a reliable, professional classroom without the burden of running a facility. This is built for you."
         },
         "institutions": {
           "title": "Institutions & Corporate Training",
@@ -197,8 +274,15 @@
       "title": "Ready to Teach Here?"
     },
     "closing": {
+      "label": "A NOTE",
       "text1": "This space is designed for instructors who understand that environment shapes teaching.",
       "text2": "If you value clarity, consistency, and a professional foundation, you've found the right place."
+    },
+    "finalCta": {
+      "quote": "Learning becomes meaningful when it's shared.",
+      "subtitle": "Renaissance is built around collaboration, dialogue, and mutual growth.\nReady to teach here?",
+      "buttonSubmit": "Submit your class to see if it is eligible",
+      "buttonTalk": "Talk to us to find out more"
     }
   },
   "booking": {
@@ -297,7 +381,21 @@
     }
   },
   "footer": {
-    "copyright": "© {year} Rena.edu",
-    "tagline": "A licensed, fully equipped education space"
+    "copyright": "© {year} Rena.edu. All Rights Reserved.",
+    "tagline": "A licensed, fully equipped education space",
+    "slogan": "Teach. Build. Belong.",
+    "nav": {
+      "home": "Home",
+      "space": "Space",
+      "timetable": "Timetable"
+    },
+    "forStudents": "For Students",
+    "forInstructors": "For Instructors",
+    "joinCommunity": "Join Our Community",
+    "teachWithUs": "Teach with Us",
+    "privacyPolicy": "Privacy policy",
+    "cookiesPolicy": "Cookies policy",
+    "address": "Address placeholder",
+    "watermark": "JOIN RENA"
   }
 }

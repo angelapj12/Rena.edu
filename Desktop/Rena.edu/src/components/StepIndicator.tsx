@@ -21,10 +21,10 @@ export default function StepIndicator({
                 <div
                   className={`w-10 h-10 rounded-full flex items-center justify-center border-2 transition-colors ${
                     isCompleted
-                      ? "bg-[#2B2B2B] border-[#2B2B2B] text-[#FAF9F7]"
+                      ? "bg-base-dark border-base-dark text-base-light"
                       : isActive
-                      ? "bg-[#FF7A5C] border-[#FF7A5C] text-white"
-                      : "bg-white border-[#E8E6E3] text-[#2B2B2B]/40"
+                      ? "bg-accent border-accent text-white"
+                      : "bg-white border-secondary-light text-base-dark/40"
                   }`}
                 >
                   {isCompleted ? "✓" : step}
@@ -33,7 +33,7 @@ export default function StepIndicator({
               {step < totalSteps && (
                 <div
                   className={`h-0.5 flex-1 mx-2 ${
-                    isCompleted ? "bg-[#2B2B2B]" : "bg-[#E8E6E3]"
+                    isCompleted ? "bg-base-dark" : "bg-secondary-light"
                   }`}
                 />
               )}

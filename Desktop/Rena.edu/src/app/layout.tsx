@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import "./globals.css";
 
-const sans = Inter({
+const openSans = Open_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
@@ -20,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={sans.variable}>
-      <body className="bg-[#FAF9F7] text-[#2B2B2B] font-sans">
+    <html lang="en" className={openSans.variable}>
+      <body className="bg-[#F2F0ED] text-[#0A2229] font-sans">
         {children}
       </body>
     </html>

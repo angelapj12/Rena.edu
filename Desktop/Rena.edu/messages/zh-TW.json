@@ -1,6 +1,30 @@
 {
+  "NotFoundPage": {
+    "title": "找不到頁面",
+    "description": "您尋找的頁面不存在。",
+    "backHome": "返回首頁"
+  },
+  "Error": {
+    "title": "發生錯誤",
+    "retry": "重試"
+  },
+  "placeholder": {
+    "timetable": {
+      "title": "課程表",
+      "description": "課程時間與場地資訊將於此公佈，敬請期待。"
+    },
+    "privacy": {
+      "title": "隱私權政策",
+      "description": "隱私權政策內容籌備中，敬請稍後查閱。"
+    },
+    "cookies": {
+      "title": "Cookie 政策",
+      "description": "Cookie 政策內容籌備中，敬請稍後查閱。"
+    }
+  },
   "common": {
     "siteName": "Rena.edu",
+    "navBrand": "RENAISSANCE",
     "submitClass": "提交課程",
     "bookTour": "預約參觀",
     "theSpace": "場地介紹",
@@ -12,109 +36,117 @@
     "notProvided": "未提供"
   },
   "homepage": {
-    "hero": {
-      "title": "為你在城市中心而設的專業教學空間",
-      "subtitle": "Ready When You Are",
-      "description": "設備完善的教室——為看重穩定、信譽和輕鬆的老師和機構而設。"
+    "renaissanceSpirit": {
+      "label": "Renaissance的靈魂",
+      "title": "Renaissance的靈魂",
+      "mission": "我們相信教育是一種文化、一種情感，\n更是一種深層的人性連結。",
+      "paragraph1": "我們精心策劃有意義的課程——旨在引領參與、激發挑戰、促成蛻變。",
+      "paragraph2": "Renaissance不僅僅是學習中心。這裡是創意孵化器，師生在此共同成長——珍視進步勝於追求完美。",
+      "cta": "探索教室",
+      "imageCaption": "The Space"
     },
-    "useCases": {
-      "title": "教室用途包括",
-      "cards": {
-        "weeklyClass": {
-          "title": "開設固定周課",
-          "description": "你已經有學生。你需要每週都能用到同一間教室——但不想被租約和設施管理綁住。"
-        },
-        "testCourse": {
-          "title": "嘗試新課程",
-          "description": "推出試驗版，蒐集真實反饋，在長期投入前確認市場反應。"
-        },
-        "intensive": {
-          "title": "開設集訓或工作坊",
-          "description": "短期集中課程、考試準備、特題講座——完全合規，開課即可。"
-        },
-        "professionalTraining": {
-          "title": "為機構提供專業培訓",
-          "description": "協會、學院、公司需要一個正式的、營運順利的場地。"
-        },
-        "seminar": {
-          "title": "舉辦混合線上線下課程",
-          "description": "在專業環境中融合現場和遠端學習者——適合網路研討會、問答、分散式培訓。"
-        },
-        "popupClass": {
-          "title": "需要靈活的短期空間",
-          "description": "臨時課程、特邀講師、一次性活動——優質教室，無需長期合約。"
-        }
-      }
+    "ourVision": {
+      "label": "我們的願景",
+      "title": "我們的願景",
+      "line1": "學習該充滿生命力—\n學習應是發現的過程。\n是可能性的展現。如你正逐步成為理想中的自己。",
+      "line2Before": "我們正在打造一個積極教育、充滿體驗的學習社群——",
+      "line2Highlight": "把學習視為一種體驗（LaaE）",
+      "line2After": "——沉浸式、人性化且具轉化力的學習環境。",
+      "line3": "在此，教學重獲生命力。",
+      "line4": "我們相信助人即是助己，致力創造一個激勵導師與求知者共同成長的空間。"
     },
-    "howItWorks": {
-      "title": "開始教學只需簡單幾步",
+    "teachAtRenaissance": {
+      "label": "在 Rena 教學",
+      "title": "在 Rena 教學",
+      "quote": "學習並非機械性的。\n它是創造性的工作。教學亦是如此。",
+      "paragraph1": "你選擇教書並非為了循規蹈矩，而是為了激勵他人、建立連結，並以滿腔熱忱傳授你的技藝。",
+      "paragraph2": "在Renaissance，我們相信教學應點燃喜悅——而非燃盡心力。"
+    },
+    "howToGetStarted": {
+      "label": "加入我們的團隊",
+      "title": "你在Rena的教學之路",
+      "headline": "你在Rena的教學之路",
+      "ctaPrompt": "準備好踏出第一步了嗎？",
       "steps": {
         "1": {
-          "title": "先線上瞭解場所",
-          "description": "線上了解使用方案、價格邏輯等資訊。"
+          "number": "01",
+          "title": "線上認識我們",
+          "description": "了解運作方式",
+          "cta": "探索場地"
         },
         "2": {
-          "title": "提交課程申請",
-          "description": "填寫課程詳情，理想使用模式和時間。"
+          "number": "02",
+          "title": "提交您的課程以供審核",
+          "description": "讓我們了解您的課程內容。",
+          "cta": "提交課程"
         },
         "3": {
-          "title": "參觀與實地確認",
-          "description": "計畫通過審核後，我們都會跟你預約介紹空間——確保彼此合適。"
+          "number": "03",
+          "title": "提交合規證明文件",
+          "description": "課程初步核准後，教師須提交教學資格及相關文件，以便進行合規審查。"
         },
         "4": {
-          "title": "安排時間",
-          "description": "通過審核和課表確認，你的時間就鎖定了。"
+          "number": "04",
+          "title": "課程已排定並正式開課",
+          "description": "一旦獲得官方合規核准，課程便排定並開放！"
         }
       }
     },
-    "cta": {
-      "title": "下一步？"
+    "hero": {
+      "title": "Teach. Build. Belong.",
+      "subLink1": "場地介紹 →",
+      "subLink2": "提交課程 →",
+      "description": "踏入Rena，探索專為教學、學習與社群而設的理想空間。與我們一起提升你的教學實踐，結識志同道合的導師。",
+      "buttonStudents": "STUDENTS",
+      "buttonInstructors": "INSTRUCTORS"
     },
-    "marquee": {
-      "items": [
-        "每週語言課程",
-        "認證計劃",
-        "技能工作坊",
-        "專業培訓",
-        "考試準備課程",
-        "短期密集課程",
-        "舞蹈學校",
-        "戲劇課程",
-        "企業培訓"
-      ]
+    "cta": {
+      "label": "WHAT'S NEXT",
+      "title": "下一步？"
     }
   },
   "space": {
     "hero": {
-      "title": "位置於城市中心的專業教學空間",
-      "description": "持證。設備完善。隨時可用。為認真教學而設計。"
+      "title": "位於城市中心的專業教學工作室",
+      "description": "專為認真教學打造的教室"
     },
     "environment": {
-      "title": "為教學而生的教室",
-      "intro": "服務包括：",
+      "label": "場地",
+      "intro": "教育環境塑造教學方式。",
+      "title": "為專業講師打造的教學空間",
+      "titleLines": {
+        "1": "為專業講師打造的",
+        "2": "教學空間",
+        "3": "",
+        "4": ""
+      },
       "features": {
         "licensed": "教育使用的持牌教室，符合持續教育課程規範",
         "furnished": "精心維護、為學習而佈置的環境",
-        "simple": "設備齊全，無需老師額外設置",
-        "exclusive": "獨立教室，沒有噪音干擾"
+        "simple": "配備完善可立即使用——無需安裝設定",
+        "exclusive": "單班制運作——杜絕噪音干擾與時段衝突"
       },
-      "outro": "教學你負責，其他的一切都交給我們。"
+      "cta": "預約參觀"
     },
     "location": {
-      "title": "在城市中心設點意味著",
-      "description1": "教室位在城市的商業樞紐，亮麗的門面寬闊開揚。",
-      "description2": "這很重要，因為它意味著：",
+      "label": "中心地點",
+      "title": "在城市的心臟地帶",
+      "quote": "我們的空間將Renaissance的精神\n深植社區——\n一個匯聚、學習與連結的場所。",
+      "description1": "教室坐落於城市專業核心區，位於專為嚴謹商務用途設計的高尚商業大樓內。",
+      "description2": "此優勢體現於：",
       "benefits": {
-        "accessible": "方便全市學生到達",
-        "transport": "靠近交通、辦公室和日常設施",
-        "professional": "適合在職專業人士和成人學習者",
-        "premium": "地理定位優越，從而為各類機構建立無聲的信任。"
+        "accessible": "全市學生皆可輕鬆抵達",
+        "transport": "鄰近交通樞紐、辦公區及日常便利設施",
+        "professional": "適合職場人士與成人學習者",
+        "premium": "定位為優質、專注的學習體驗"
       },
-      "description3": "這不是隱祕的、臨時的小地方。位置本身傳達了可信度、空間本身為你加分。"
+      "description3": "場地本身即為您的專業信譽基礎加分。",
+      "cta": "場地介紹 →"
     },
     "pricing": {
-      "title": "費用方案：按規律程度定價",
-      "subtitle": "課程越穩定，費用越划算——就這麼簡單。",
+      "label": "教室使用方案",
+      "title": "為您的教學需求選擇最適合的方案",
+      "subtitle": "我們依可預測性定價——越穩定，費率越優惠。",
       "options": {
         "flexible": {
           "title": "靈活使用",
@@ -151,16 +183,61 @@
         }
       }
     },
+    "useCases": {
+      "label": "使用範圍",
+      "title": "解決您教育需求的都市方案。",
+      "cards": {
+        "weeklyClass": {
+          "title": "開設固定周課",
+          "description": "你已經有學生。你需要每週都能用到同一間教室——但不想被租約和設施管理綁住。"
+        },
+        "testCourse": {
+          "title": "嘗試新課程",
+          "description": "推出試驗版，蒐集真實反饋，在長期投入前確認市場反應。"
+        },
+        "intensive": {
+          "title": "開設集訓或工作坊",
+          "description": "短期集中課程、考試準備、特題講座——完全合規，開課即可。"
+        },
+        "professionalTraining": {
+          "title": "為機構提供專業培訓",
+          "description": "協會、學院、公司需要一個正式的、營運順利的場地。"
+        },
+        "seminar": {
+          "title": "舉辦混合線上線下課程",
+          "description": "在專業環境中融合現場和遠端學習者——適合網路研討會、問答、分散式培訓。"
+        },
+        "popupClass": {
+          "title": "需要靈活的短期空間",
+          "description": "臨時課程、特邀講師、一次性活動——優質教室，無需長期合約。"
+        }
+      }
+    },
+    "marquee": {
+      "items": [
+        "每週語言課",
+        "認證課程",
+        "技能工作坊",
+        "專業培訓",
+        "考試準備課程",
+        "短期密集班",
+        "舞蹈學校",
+        "戲劇課",
+        "企業培訓"
+      ]
+    },
     "audience": {
-      "title": "合作教師或專業人士對象",
+      "label": "適用對象",
+      "intro1": "想像一堂課像遊戲般有趣——而非苦差事",
+      "intro2": "您只需準備好授課。其餘事宜交給我們處理。",
       "cards": {
         "instructors": {
           "title": "獨立教師",
-          "description": "你定期教課，想要一間可靠、專業的教室——但不想被經營場地的事務纏身。"
+          "description": "你經營結構化的課程，需要一致性、合規性、中心位置。我們提供硬體和流程，你專心教學。"
         },
         "academies": {
           "title": "學院和專業協會",
-          "description": "你經營結構化的課程，需要一致性、合規性、中心位置。我們提供硬體和流程，你專心教學。"
+          "description": "你定期教課，想要一間可靠、專業的教室——但不想被經營場地的事務纏身。"
         },
         "institutions": {
           "title": "機構和企業培訓",
@@ -197,8 +274,15 @@
       "title": "準備好在這裡教學了嗎？"
     },
     "closing": {
+      "label": "A NOTE",
       "text1": "我們目的很簡單：提供一個穩定的教室，讓你專心教學。你不用管場地、不用擔心排課，地點在城市中心，自然吸引認真的學生來找你。",
       "text2": "當老師教學變得有樂趣，學習便成為難忘的體驗。而我們把其他的處理好——這就是最好的合作結果。"
+    },
+    "finalCta": {
+      "quote": "學習，在分享中變得有意義。",
+      "subtitle": "Renaissance 建立在協作、對話與共同成長之上。\n準備好在這裡教學了嗎？",
+      "buttonSubmit": "提交課程，確認是否符合資格",
+      "buttonTalk": "與我們聯繫，了解更多"
     }
   },
   "booking": {
@@ -297,7 +381,21 @@
     }
   },
   "footer": {
-    "copyright": "© {year} Rena.edu",
-    "tagline": "持牌、設備齊全的教育空間"
+    "copyright": "© {year} Rena.edu. All Rights Reserved.",
+    "tagline": "持牌、設備齊全的教育空間",
+    "slogan": "Teach. Build. Belong.",
+    "nav": {
+      "home": "首頁",
+      "space": "場地介紹",
+      "timetable": "課程表"
+    },
+    "forStudents": "學生專區",
+    "forInstructors": "講師專區",
+    "joinCommunity": "加入社群",
+    "teachWithUs": "與我們一起教學",
+    "privacyPolicy": "隱私權政策",
+    "cookiesPolicy": "Cookie 政策",
+    "address": "地址",
+    "watermark": "JOIN RENA"
   }
 }

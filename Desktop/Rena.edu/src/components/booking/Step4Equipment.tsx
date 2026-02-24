@@ -49,10 +49,10 @@ export default function Step4Equipment({
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-3xl font-serif font-medium text-[#2B2B2B] mb-2">
+        <h2 className="text-h2-compact text-base-dark mb-2">
           {t("title")}
         </h2>
-        <p className="text-[#2B2B2B]/70 leading-relaxed">
+        <p className="text-body-lg text-base-dark/70">
           {t("description")}
         </p>
       </div>
@@ -62,7 +62,7 @@ export default function Step4Equipment({
           {equipmentOptions.map((option) => (
             <label
               key={option.id}
-              className="flex items-center p-3 border border-[#E8E6E3] rounded-lg cursor-pointer hover:border-[#2B2B2B]/20 transition-colors"
+              className="flex items-center p-3 border border-secondary-light rounded-lg cursor-pointer hover:border-base-dark/20 transition-colors"
             >
               <input
                 type="checkbox"
@@ -72,7 +72,7 @@ export default function Step4Equipment({
                 }
                 className="mr-3"
               />
-              <span className="text-[#2B2B2B] font-medium text-sm">
+              <span className="text-base-dark font-medium text-sm">
                 {t(`equipment.${option.id}`)}
               </span>
             </label>

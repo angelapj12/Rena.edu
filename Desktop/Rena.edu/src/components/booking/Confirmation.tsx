@@ -12,7 +12,7 @@ export default function Confirmation({ name }: ConfirmationProps) {
   return (
     <div className="space-y-6 text-center">
       <div className="mb-8">
-        <div className="w-16 h-16 bg-[#FF7A5C] rounded-full flex items-center justify-center mx-auto mb-6">
+        <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
           <svg
             className="w-8 h-8 text-white"
             fill="none"
@@ -27,25 +27,25 @@ export default function Confirmation({ name }: ConfirmationProps) {
             />
           </svg>
         </div>
-        <h2 className="text-4xl font-serif font-semibold text-[#2B2B2B] mb-4">
+        <h2 className="text-h2 text-base-dark mb-4">
           {t("title")}
         </h2>
-        <p className="text-xl text-[#2B2B2B]/80 leading-relaxed max-w-2xl mx-auto">
+        <p className="text-body-lg text-base-dark/80 max-w-2xl mx-auto">
           {t("thankYou")}{name ? `, ${name}` : ""}. {t("message")}
         </p>
       </div>
 
-      <div className="bg-[#FAF9F7] p-8 rounded-2xl border border-[#E8E6E3] text-left max-w-2xl mx-auto">
-        <p className="text-lg text-[#2B2B2B]/80 leading-relaxed mb-4">
+      <div className="bg-base-light-subtle p-8 rounded-2xl border border-secondary-light text-left max-w-2xl mx-auto">
+        <p className="text-body-lg text-base-dark/80 mb-4">
           {t("description1")}
         </p>
-        <p className="text-lg text-[#2B2B2B]/80 leading-relaxed">
+        <p className="text-body-lg text-base-dark/80">
           {t("description2")}
         </p>
       </div>
 
       <div className="pt-6">
-        <p className="text-[#2B2B2B]/70 leading-relaxed">
+        <p className="text-body-lg text-base-dark/70">
           {t("urgent")}
         </p>
       </div>

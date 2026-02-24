@@ -21,10 +21,10 @@ export default function Step2ClassDetails({
   return (
     <div className="space-y-6">
       <div>
-        <h2 className="text-3xl font-serif font-medium text-[#2B2B2B] mb-2">
+        <h2 className="text-h2-compact text-base-dark mb-2">
           {t("title")}
         </h2>
-        <p className="text-[#2B2B2B]/70 leading-relaxed">
+        <p className="text-body-lg text-base-dark/70">
           {t("description")}
         </p>
       </div>
@@ -32,7 +32,7 @@ export default function Step2ClassDetails({
       <div>
         <label
           htmlFor="classDescription"
-          className="block text-sm font-medium text-[#2B2B2B] mb-2"
+          className="block text-sm font-medium text-base-dark mb-2"
         >
           {t("classDescription")}
         </label>
@@ -42,7 +42,7 @@ export default function Step2ClassDetails({
           rows={4}
           value={formData.classDescription}
           onChange={(e) => updateFormData("classDescription", e.target.value)}
-          className="w-full px-4 py-3 border border-[#E8E6E3] rounded-lg focus:ring-2 focus:ring-[#FF7A5C] focus:border-transparent bg-[#FAF9F7] text-[#2B2B2B]"
+          className="w-full px-4 py-3 border border-secondary-light rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent bg-base-light-subtle text-base-dark"
           placeholder={t("placeholders.classDescription")}
         />
       </div>
@@ -50,7 +50,7 @@ export default function Step2ClassDetails({
       <div>
         <label
           htmlFor="preferredTimes"
-          className="block text-sm font-medium text-[#2B2B2B] mb-2"
+          className="block text-sm font-medium text-base-dark mb-2"
         >
           {t("preferredTimes")}
         </label>
@@ -59,7 +59,7 @@ export default function Step2ClassDetails({
           id="preferredTimes"
           value={formData.preferredTimes}
           onChange={(e) => updateFormData("preferredTimes", e.target.value)}
-          className="w-full px-4 py-3 border border-[#E8E6E3] rounded-lg focus:ring-2 focus:ring-[#FF7A5C] focus:border-transparent bg-[#FAF9F7] text-[#2B2B2B]"
+          className="w-full px-4 py-3 border border-secondary-light rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent bg-base-light-subtle text-base-dark"
           placeholder={t("placeholders.preferredTimes")}
         />
       </div>
